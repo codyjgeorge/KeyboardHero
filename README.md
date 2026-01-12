@@ -20,8 +20,8 @@ I will continue update progress as development takes place.
 # Description
 
 Keys(Letters) fall down the screen and must be pressed by the corresponding key when they cross the target line.
-Letters will fall on the left side of the screen with keys intended for your left hand, and same for the right side and right hand.
-This game is being developed with C++/SFML and all of the songs and sound effects is being created by me.
+Letters will fall on the left side of the screen with keys intended for your left hand, and same for the right side and right hand.\n
+\nI am creating all of the songs/sfx myself and developing the game in C++ with SFML.
 
 # Who is this for?
 
