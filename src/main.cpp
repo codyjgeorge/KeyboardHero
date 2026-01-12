@@ -10,6 +10,7 @@ using namespace std;
 char random_letter_generator() { return 'A' + rand() % 26; }
 
 float random_X_value(int windowSize) { return rand() % (windowSize + 1); }
+float random_speed() { return 300 + rand() % 601; }
 
 struct randomLetter {
   Text randomLetterText;
@@ -58,10 +59,32 @@ int main() {
   titleSubtext.setPosition(
       {startWindow.getSize().x / 2.f, startWindow.getSize().y / 1.5f});
 
+  // sound buffers
+  SoundBuffer titleSongBuffer;
+  SoundBuffer titleTransSoundBuffer;
+
+  // load to buffers
+  if (!titleSongBuffer.loadFromFile("assets/Audio/StartMenu-Song.wav")) {
+    cerr << "Failed to load title song" << endl;
+  }
+  if (!titleTransSoundBuffer.loadFromFile(
+          "assets/Audio/StartMenuTransition-Sound.wav")) {
+    cerr << "Failed to load title transition sound" << endl;
+  }
+
+  // sound players
+  Sound titleSong(titleSongBuffer);
+  Sound titleTransSound(titleTransSoundBuffer);
+
   // initialize clocks
   Clock gameClock;
   Clock spawnClock;
   float spawnInterval = 0.2f;
+
+  // start title song
+  titleSong.setLooping(true);
+  titleSong.play();
+  bool isLooping = titleSong.isLooping();
 
   // start start menu loop
   while (startWindow.isOpen()) {
@@ -84,6 +107,8 @@ int main() {
           // ENTER -> close start screen, begin game
           if (key->scancode == Keyboard::Scancode::Enter) {
             startWindow.close();
+            titleSong.stop();
+            titleTransSound.play();
           }
         } // END key pressed handling
       } // END start menu event handling
@@ -106,8 +131,9 @@ int main() {
         float randomXvalue = random_X_value(startWindow.getSize().x);
         randomLetterText.setPosition({randomXvalue, -20.f});
 
-        // add letters to vector with speed of 600.f
-        randomLetters.push_back({randomLetterText, 600.f});
+        // add letters to vector with random speed
+        float randomSpeed = random_speed();
+        randomLetters.push_back({randomLetterText, randomSpeed});
 
         spawnClock.restart();
       }

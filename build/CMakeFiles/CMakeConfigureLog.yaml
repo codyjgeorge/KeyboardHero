@@ -20,8 +20,8 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -56,8 +56,8 @@ events:
       - "/Users/codygeorge/.yarn/bin/"
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/uname"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/uname"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/uname"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/uname"
       - "/home/neonvoid/.local/share/fnm/uname"
       - "/Users/codygeorge/.pyenv/shims/uname"
       - "/Users/codygeorge/.cargo/bin/uname"
@@ -68,8 +68,8 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -132,8 +132,8 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -168,8 +168,8 @@ events:
       - "/Users/codygeorge/.yarn/bin/"
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/gmake"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/gmake"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/gmake"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/gmake"
       - "/home/neonvoid/.local/share/fnm/gmake"
       - "/Users/codygeorge/.pyenv/shims/gmake"
       - "/Users/codygeorge/.cargo/bin/gmake"
@@ -203,8 +203,8 @@ events:
       - "/Users/codygeorge/.fzf/bin/gmake"
       - "/Users/codygeorge/.yarn/bin/gmake"
       - "/Users/codygeorge/.rd/bin/gmake"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/make"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/make"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/make"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/make"
       - "/home/neonvoid/.local/share/fnm/make"
       - "/Users/codygeorge/.pyenv/shims/make"
       - "/Users/codygeorge/.cargo/bin/make"
@@ -215,8 +215,8 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -277,8 +277,8 @@ events:
       - "icx"
       - "clang"
     candidate_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -313,8 +313,8 @@ events:
       - "/Users/codygeorge/.yarn/bin/"
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/cc"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/cc"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/cc"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/cc"
       - "/home/neonvoid/.local/share/fnm/cc"
       - "/Users/codygeorge/.pyenv/shims/cc"
       - "/Users/codygeorge/.cargo/bin/cc"
@@ -325,8 +325,8 @@ events:
     found: "/usr/bin/cc"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -388,8 +388,8 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -508,8 +508,8 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -545,8 +545,8 @@ events:
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -602,8 +602,8 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -639,8 +639,8 @@ events:
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -696,8 +696,8 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -733,8 +733,8 @@ events:
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -790,8 +790,8 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -827,8 +827,8 @@ events:
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -884,8 +884,8 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -921,8 +921,8 @@ events:
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -978,8 +978,8 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1015,8 +1015,8 @@ events:
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1072,8 +1072,8 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1108,8 +1108,8 @@ events:
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
       - "/usr/bin/objcopy"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/objcopy"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/objcopy"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/objcopy"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/objcopy"
       - "/home/neonvoid/.local/share/fnm/objcopy"
       - "/Users/codygeorge/.pyenv/shims/objcopy"
       - "/Users/codygeorge/.cargo/bin/objcopy"
@@ -1145,8 +1145,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1202,8 +1202,8 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1238,8 +1238,8 @@ events:
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
       - "/usr/bin/readelf"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/readelf"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/readelf"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/readelf"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/readelf"
       - "/home/neonvoid/.local/share/fnm/readelf"
       - "/Users/codygeorge/.pyenv/shims/readelf"
       - "/Users/codygeorge/.cargo/bin/readelf"
@@ -1275,8 +1275,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1332,8 +1332,8 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1368,8 +1368,8 @@ events:
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/dlltool"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/dlltool"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/dlltool"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/dlltool"
       - "/home/neonvoid/.local/share/fnm/dlltool"
       - "/Users/codygeorge/.pyenv/shims/dlltool"
       - "/Users/codygeorge/.cargo/bin/dlltool"
@@ -1405,8 +1405,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1462,8 +1462,8 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1498,8 +1498,8 @@ events:
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
       - "/usr/bin/addr2line"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/addr2line"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/addr2line"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/addr2line"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/addr2line"
       - "/home/neonvoid/.local/share/fnm/addr2line"
       - "/Users/codygeorge/.pyenv/shims/addr2line"
       - "/Users/codygeorge/.cargo/bin/addr2line"
@@ -1535,8 +1535,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1592,8 +1592,8 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1628,8 +1628,8 @@ events:
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/tapi"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/tapi"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/tapi"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/tapi"
       - "/home/neonvoid/.local/share/fnm/tapi"
       - "/Users/codygeorge/.pyenv/shims/tapi"
       - "/Users/codygeorge/.cargo/bin/tapi"
@@ -1665,8 +1665,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1731,8 +1731,8 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1794,8 +1794,8 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -1913,8 +1913,8 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/"
       - "/Users/codygeorge/.pyenv/shims/"
       - "/Users/codygeorge/.cargo/bin/"
@@ -1949,8 +1949,8 @@ events:
       - "/Users/codygeorge/.yarn/bin/"
       - "/Users/codygeorge/.rd/bin/"
     searched_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/install_name_tool"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/install_name_tool"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/install_name_tool"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/install_name_tool"
       - "/home/neonvoid/.local/share/fnm/install_name_tool"
       - "/Users/codygeorge/.pyenv/shims/install_name_tool"
       - "/Users/codygeorge/.cargo/bin/install_name_tool"
@@ -1961,8 +1961,8 @@ events:
     found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -2007,8 +2007,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9"
-      binary: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9"
+      source: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN"
+      binary: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2020,18 +2020,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9'
+        Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ed98c/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ed98c.dir/build.make CMakeFiles/cmTC_ed98c.dir/build
-        Building C object CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d3f0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2d3f0.dir/build.make CMakeFiles/cmTC_2d3f0.dir/build
+        Building C object CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 17.0.0 (clang-1700.6.3.2)
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 17.0.0 (clang-1700.6.3.2) default target arm64-apple-darwin25.2.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -2044,13 +2044,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_ed98c
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed98c.dir/link.txt --verbose=1
+        Linking C executable cmTC_2d3f0
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d3f0.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.6.3.2)
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ed98c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2d3f0 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 06:36:05 Dec  2 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -2062,7 +2062,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -o cmTC_ed98c
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -o cmTC_2d3f0
         
       exitCode: 0
   -
@@ -2104,18 +2104,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9']
+        ignore line: [Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ed98c/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ed98c.dir/build.make CMakeFiles/cmTC_ed98c.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d3f0/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2d3f0.dir/build.make CMakeFiles/cmTC_2d3f0.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 17.0.0 (clang-1700.6.3.2)]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-UThHN9 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-FRE0YN -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.6.3.2) default target arm64-apple-darwin25.2.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -2128,13 +2128,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_ed98c]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed98c.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_2d3f0]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d3f0.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.6.3.2)]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ed98c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2d3f0 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2151,12 +2151,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_ed98c] ==> ignore
+          arg [cmTC_2d3f0] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_ed98c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_2d3f0.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -2198,8 +2198,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v"
-      binary: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v"
+      source: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7"
+      binary: "/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2212,19 +2212,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v'
+        Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1f45e/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1f45e.dir/build.make CMakeFiles/cmTC_1f45e.dir/build
-        Building CXX object CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_105b9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_105b9.dir/build.make CMakeFiles/cmTC_105b9.dir/build
+        Building CXX object CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.6.3.2)
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.6.3.2) default target arm64-apple-darwin25.2.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -2238,13 +2238,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_1f45e
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f45e.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_105b9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_105b9.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.6.3.2)
         Target: arm64-apple-darwin25.2.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1f45e -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_105b9 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 06:36:05 Dec  2 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -2256,7 +2256,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1f45e
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_105b9
         
       exitCode: 0
   -
@@ -2300,19 +2300,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v']
+        ignore line: [Change Dir: '/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1f45e/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1f45e.dir/build.make CMakeFiles/cmTC_1f45e.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_105b9/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_105b9.dir/build.make CMakeFiles/cmTC_105b9.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.6.3.2)]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-lEo57v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.2 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/CMakeScratch/TryCompile-xgErF7 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.6.3.2) default target arm64-apple-darwin25.2.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -2326,13 +2326,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_1f45e]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f45e.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_105b9]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_105b9.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.6.3.2)]
         ignore line: [Target: arm64-apple-darwin25.2.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1f45e -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_105b9 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2349,12 +2349,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1f45e] ==> ignore
+          arg [cmTC_105b9] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_1f45e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_105b9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
@@ -2407,12 +2407,12 @@ events:
     names:
       - "SFML.tag"
     candidate_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/SFML/doc/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/share/doc/SFML/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/SFML/doc/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/share/doc/SFML/"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/SFML/doc/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/share/doc/SFML/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/SFML/doc/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/share/doc/SFML/"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/"
       - "/home/neonvoid/.local/share/fnm/SFML/doc/"
       - "/home/neonvoid/.local/share/fnm/share/doc/SFML/"
       - "/home/neonvoid/.local/share/fnm/"
@@ -2621,12 +2621,12 @@ events:
       - "/opt/share/doc/SFML/"
       - "/opt/"
     searched_directories:
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/SFML/doc/SFML.tag"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/share/doc/SFML/SFML.tag"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin/SFML.tag"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/SFML/doc/SFML.tag"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/share/doc/SFML/SFML.tag"
-      - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/SFML/doc/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/share/doc/SFML/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/SFML/doc/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/share/doc/SFML/SFML.tag"
+      - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin/SFML.tag"
       - "/home/neonvoid/.local/share/fnm/SFML/doc/SFML.tag"
       - "/home/neonvoid/.local/share/fnm/share/doc/SFML/SFML.tag"
       - "/home/neonvoid/.local/share/fnm/SFML.tag"
@@ -2739,8 +2739,8 @@ events:
     found: "/opt/homebrew/share/doc/SFML/"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
@@ -2864,19 +2864,19 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/SFMLConfig.cmake"
+        path: "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/SFMLConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/sfml-config.cmake"
+        path: "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/sfml-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/SFMLConfig.cmake"
+        path: "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/SFMLConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/sfml-config.cmake"
+        path: "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/sfml-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -2901,8 +2901,8 @@ events:
       version: "3.0.2"
     search_context:
       ENV{PATH}:
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2305_1768079368472/bin"
-        - "/Users/codygeorge/Library/Caches/fnm_multishells/2281_1768079368426/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73927_1768119425374/bin"
+        - "/Users/codygeorge/Library/Caches/fnm_multishells/73903_1768119425318/bin"
         - "/home/neonvoid/.local/share/fnm"
         - "/Users/codygeorge/.pyenv/shims"
         - "/Users/codygeorge/.cargo/bin"
