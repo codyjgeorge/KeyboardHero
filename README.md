@@ -8,8 +8,8 @@ I will continue update progress as development takes place.
 
 ### Progress Report
 
-- [ x] Title Window
-- [ x] Title Window music/sounds
+- [x] Title Window
+- [x] Title Window music/sounds
 - [ ] Song Selection Window
 - [ ] Song Selection music/sounds
 - [ ] Song 1 Window/Audio
