@@ -8,7 +8,7 @@ This game is currently in the development process. In the meantime, feel free to
 
 [Cody's Itch.io](https://cod3z.itch.io/)
 
-I will continue update progress as development takes place.
+I will continue to update progress as development takes place.
 
 ### 📈 Progress Report
 
@@ -28,7 +28,7 @@ Letters will fall on the left side of the screen with keys intended for your lef
 
 I am creating all of the songs/sfx myself and developing the game in C++ with SFML.
 
-## Who is this for?
+## Who is this for❓
 
 Anyone who wants an interactive and fun way to learn muscle memory with their keyboard and key locations.
 
