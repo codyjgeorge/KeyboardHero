@@ -14,12 +14,21 @@ I will continue to update progress as development takes place.
 
 - [x] Title Window
 - [x] Title Window music/sounds
-- [ ] Song Selection Window
-- [ ] Song Selection music/sounds
-- [ ] Song 1 Window/Audio
-- [ ] Song 2 Window/Audio
-- [ ] Song 3 Window/Audio
-- [ ] Pause/Settings Window
+- [ ] Rules Window
+- [ ] Controls Window
+- [ ] Settings Window
+- [ ] Pause Window
+- [ ] Song 1
+- [ ] Song 2
+- [ ] Song 3
+
+### 🎬 Preview
+
+[Start Menu Preview](/previews/StartMenuPreview.mov)
+
+<video src="previews/StartMenuPreview.mov" controls width="600">
+  Your browser does not support the video tag.
+</video>
 
 ## 📝 Description
 
