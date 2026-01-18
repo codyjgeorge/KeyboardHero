@@ -24,7 +24,7 @@ I will continue to update progress as development takes place.
 
 ### 🎬 Preview
 
-![Start Menu Preview](/previews/StartMenuPreview.mov)
+![Start Menu Preview](/previews/StartMenuPreview.gif)
 
 <video src="previews/StartMenuPreview.mov" controls width="600">
   Your browser does not support the video tag.
