@@ -24,11 +24,9 @@ I will continue to update progress as development takes place.
 
 ### 🎬 Preview
 
-![Start Menu Preview](/previews/StartMenu.gif)
+Click on the .gif and download the .mov to hear the Main Menu music.
 
-<video src="previews/StartMenuPreview.mov" controls width="600">
-  Your browser does not support the video tag.
-</video>
+![Start Menu Preview](/previews/StartMenu.gif)
 
 ## 📝 Description
 
