@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/Users/codygeorge/dev/C++games/KeyboardHero/build",
-  "command": "/usr/bin/c++  -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/KeyboardHero.dir/src/main.cpp.o -c /Users/codygeorge/dev/C++games/KeyboardHero/src/main.cpp",
-  "file": "/Users/codygeorge/dev/C++games/KeyboardHero/src/main.cpp",
+  "directory": "/home/cody/dev/KeyboardHero/build",
+  "command": "/usr/bin/c++   -std=gnu++17 -o CMakeFiles/KeyboardHero.dir/src/main.cpp.o -c /home/cody/dev/KeyboardHero/src/main.cpp",
+  "file": "/home/cody/dev/KeyboardHero/src/main.cpp",
   "output": "CMakeFiles/KeyboardHero.dir/src/main.cpp.o"
 }
 ]

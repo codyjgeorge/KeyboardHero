@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/KeyboardHero.dir/link.d"
   "CMakeFiles/KeyboardHero.dir/src/main.cpp.o"
   "CMakeFiles/KeyboardHero.dir/src/main.cpp.o.d"
   "KeyboardHero"
