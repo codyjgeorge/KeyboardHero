@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/usr/lib/libsfml-graphics.so.3.0.2"
+			"path" : "/opt/homebrew/lib/libsfml-system.3.0.2.dylib"
 		}
 	],
 	"backtrace" : 5,
@@ -13,13 +13,12 @@
 		[
 			"add_library",
 			"include",
-			"find_package",
-			"set_target_properties"
+			"find_package"
 		],
 		"files" : 
 		[
-			"/usr/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake",
-			"/usr/lib/cmake/SFML/SFMLConfig.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLSystemSharedTargets.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -50,13 +49,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 68,
-				"parent" : 4
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 70,
+				"line" : 59,
 				"parent" : 4
 			}
 		]
@@ -66,25 +59,11 @@
 		"major" : 2,
 		"minor" : 9
 	},
-	"id" : "SFML::Graphics::@6890427a1f51a3e7e1df",
+	"id" : "SFML::System::@6890427a1f51a3e7e1df",
 	"imported" : true,
-	"interfaceCompileDependencies" : 
-	[
-		{
-			"backtrace" : 6,
-			"id" : "SFML::Window::@6890427a1f51a3e7e1df"
-		}
-	],
-	"interfaceLinkLibraries" : 
-	[
-		{
-			"backtrace" : 6,
-			"id" : "SFML::Window::@6890427a1f51a3e7e1df"
-		}
-	],
 	"local" : true,
-	"name" : "SFML::Graphics",
-	"nameOnDisk" : "libsfml-graphics.so.3.0.2",
+	"name" : "SFML::System",
+	"nameOnDisk" : "libsfml-system.3.0.2.dylib",
 	"paths" : 
 	{
 		"build" : ".",

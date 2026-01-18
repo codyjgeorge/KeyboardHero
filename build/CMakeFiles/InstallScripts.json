@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/cody/dev/KeyboardHero/build/cmake_install.cmake"
+		"/Users/codygeorge/dev/C++games/KeyboardHero/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

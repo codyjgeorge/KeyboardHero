@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/usr/lib/libsfml-system.so.3.0.2"
+			"path" : "/opt/homebrew/lib/libsfml-window.3.0.2.dylib"
 		}
 	],
 	"backtrace" : 5,
@@ -13,12 +13,13 @@
 		[
 			"add_library",
 			"include",
-			"find_package"
+			"find_package",
+			"set_target_properties"
 		],
 		"files" : 
 		[
-			"/usr/lib/cmake/SFML/SFMLSystemSharedTargets.cmake",
-			"/usr/lib/cmake/SFML/SFMLConfig.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLWindowSharedTargets.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -49,7 +50,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 68,
+				"line" : 59,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 61,
 				"parent" : 4
 			}
 		]
@@ -59,11 +66,25 @@
 		"major" : 2,
 		"minor" : 9
 	},
-	"id" : "SFML::System::@6890427a1f51a3e7e1df",
+	"id" : "SFML::Window::@6890427a1f51a3e7e1df",
 	"imported" : true,
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "SFML::System::@6890427a1f51a3e7e1df"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "SFML::System::@6890427a1f51a3e7e1df"
+		}
+	],
 	"local" : true,
-	"name" : "SFML::System",
-	"nameOnDisk" : "libsfml-system.so.3.0.2",
+	"name" : "SFML::Window",
+	"nameOnDisk" : "libsfml-window.3.0.2.dylib",
 	"paths" : 
 	{
 		"build" : ".",

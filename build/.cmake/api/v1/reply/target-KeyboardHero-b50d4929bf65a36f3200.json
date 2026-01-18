@@ -20,9 +20,9 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"/usr/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake",
-			"/usr/lib/cmake/SFML/SFMLConfig.cmake",
-			"/usr/lib/cmake/SFML/SFMLAudioSharedTargets.cmake"
+			"/opt/homebrew/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLAudioSharedTargets.cmake"
 		],
 		"nodes" : 
 		[
@@ -64,7 +64,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 70,
+				"line" : 61,
 				"parent" : 6
 			},
 			{
@@ -80,7 +80,7 @@
 			{
 				"command" : 2,
 				"file" : 3,
-				"line" : 70,
+				"line" : 61,
 				"parent" : 9
 			},
 			{
@@ -113,7 +113,15 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=gnu++17"
+					"fragment" : "-std=gnu++17 -arch arm64"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/include"
 				}
 			],
 			"language" : "CXX",
@@ -137,23 +145,31 @@
 		"commandFragments" : 
 		[
 			{
-				"backtrace" : 2,
-				"fragment" : "/usr/lib/libsfml-graphics.so.3.0.2",
+				"fragment" : "-Wl,-search_paths_first -Wl,-headerpad_max_install_names",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/opt/homebrew/lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/usr/lib/libsfml-audio.so.3.0.2",
+				"fragment" : "/opt/homebrew/lib/libsfml-graphics.3.0.2.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/opt/homebrew/lib/libsfml-audio.3.0.2.dylib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 7,
-				"fragment" : "/usr/lib/libsfml-window.so.3.0.2",
+				"fragment" : "/opt/homebrew/lib/libsfml-window.3.0.2.dylib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 10,
-				"fragment" : "/usr/lib/libsfml-system.so.3.0.2",
+				"fragment" : "/opt/homebrew/lib/libsfml-system.3.0.2.dylib",
 				"role" : "libraries"
 			}
 		],

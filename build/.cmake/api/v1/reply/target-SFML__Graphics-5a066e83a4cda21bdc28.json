@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/usr/lib/libsfml-audio.so.3.0.2"
+			"path" : "/opt/homebrew/lib/libsfml-graphics.3.0.2.dylib"
 		}
 	],
 	"backtrace" : 5,
@@ -18,8 +18,8 @@
 		],
 		"files" : 
 		[
-			"/usr/lib/cmake/SFML/SFMLAudioSharedTargets.cmake",
-			"/usr/lib/cmake/SFML/SFMLConfig.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLGraphicsSharedTargets.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -50,13 +50,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 68,
+				"line" : 59,
 				"parent" : 4
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 70,
+				"line" : 61,
 				"parent" : 4
 			}
 		]
@@ -66,25 +66,25 @@
 		"major" : 2,
 		"minor" : 9
 	},
-	"id" : "SFML::Audio::@6890427a1f51a3e7e1df",
+	"id" : "SFML::Graphics::@6890427a1f51a3e7e1df",
 	"imported" : true,
 	"interfaceCompileDependencies" : 
 	[
 		{
 			"backtrace" : 6,
-			"id" : "SFML::System::@6890427a1f51a3e7e1df"
+			"id" : "SFML::Window::@6890427a1f51a3e7e1df"
 		}
 	],
 	"interfaceLinkLibraries" : 
 	[
 		{
 			"backtrace" : 6,
-			"id" : "SFML::System::@6890427a1f51a3e7e1df"
+			"id" : "SFML::Window::@6890427a1f51a3e7e1df"
 		}
 	],
 	"local" : true,
-	"name" : "SFML::Audio",
-	"nameOnDisk" : "libsfml-audio.so.3.0.2",
+	"name" : "SFML::Graphics",
+	"nameOnDisk" : "libsfml-graphics.3.0.2.dylib",
 	"paths" : 
 	{
 		"build" : ".",

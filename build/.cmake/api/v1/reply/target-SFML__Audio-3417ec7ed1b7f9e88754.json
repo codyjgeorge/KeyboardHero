@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/usr/lib/libsfml-window.so.3.0.2"
+			"path" : "/opt/homebrew/lib/libsfml-audio.3.0.2.dylib"
 		}
 	],
 	"backtrace" : 5,
@@ -18,8 +18,8 @@
 		],
 		"files" : 
 		[
-			"/usr/lib/cmake/SFML/SFMLWindowSharedTargets.cmake",
-			"/usr/lib/cmake/SFML/SFMLConfig.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLAudioSharedTargets.cmake",
+			"/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -50,13 +50,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 68,
+				"line" : 59,
 				"parent" : 4
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 70,
+				"line" : 61,
 				"parent" : 4
 			}
 		]
@@ -66,7 +66,7 @@
 		"major" : 2,
 		"minor" : 9
 	},
-	"id" : "SFML::Window::@6890427a1f51a3e7e1df",
+	"id" : "SFML::Audio::@6890427a1f51a3e7e1df",
 	"imported" : true,
 	"interfaceCompileDependencies" : 
 	[
@@ -83,8 +83,8 @@
 		}
 	],
 	"local" : true,
-	"name" : "SFML::Window",
-	"nameOnDisk" : "libsfml-window.so.3.0.2",
+	"name" : "SFML::Audio",
+	"nameOnDisk" : "libsfml-audio.3.0.2.dylib",
 	"paths" : 
 	{
 		"build" : ".",
