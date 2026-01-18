@@ -24,7 +24,7 @@ I will continue to update progress as development takes place.
 
 ### 🎬 Preview
 
-Click on the .gif and download the .mov to hear the Main Menu music.
+![Click here to download the preview and hear the Main Menu music](https://github.com/codyjgeorge/KeyboardHero/blob/master/previews/StartMenuPreview.mov)
 
 ![Start Menu Preview](/previews/StartMenu.gif)
 
