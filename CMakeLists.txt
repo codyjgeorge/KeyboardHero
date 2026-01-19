@@ -20,13 +20,16 @@ add_executable(KeyboardHero src/main.cpp)
 
 # link SFML libraries
 target_link_libraries(KeyboardHero PRIVATE
+    SFML::System
+    SFML::Window
     SFML::Graphics
     SFML::Audio
 )
 
-# At the end of yo
+# Post Build - copy the assets folder
 add_custom_command(
   TARGET KeyboardHero POST_BUILD
+  COMMENT "Copying assets to /build directory"
   COMMAND ${CMAKE_COMMAND} -E copy_directory
           ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:KeyboardHero>/assets
 )

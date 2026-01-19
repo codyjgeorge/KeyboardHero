@@ -73,13 +73,13 @@ int main() {
     return -1;
   }
 
-  // create menu window
-  RenderWindow window(VideoMode({1920, 1080}), "Main Menu");
-  window.setVerticalSyncEnabled(true);
-
   // create game window
   RenderWindow gameWindow(VideoMode({1920, 1080}), "KeyboardHero");
   gameWindow.setVerticalSyncEnabled(true);
+
+  // create menu window
+  RenderWindow window(VideoMode({1920, 1080}), "Main Menu");
+  window.setVerticalSyncEnabled(true);
 
   // create title text
   Text titleText(firacode);
@@ -204,9 +204,9 @@ int main() {
 
       window.display();
     } // END delta time
-  } // END menu window loop
+  } // END main menu window loop
 
-  // start game window loop //
+  // start game window (KeyboardHero)loop //
   while (gameWindow.isOpen()) {
 
     // start delta time
