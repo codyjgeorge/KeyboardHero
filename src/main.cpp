@@ -41,6 +41,8 @@ float random_right_X_value(int windowSize) {
 
 float random_speed() { return 300 + rand() % 601; }
 
+float random_spawn_float() { return 0.5 + (rand() % 151) / 100.0; }
+
 struct randomLetter {
   Text randomLetterText;
   float randomLetterSpeed;
@@ -121,10 +123,11 @@ int main() {
   // initialize clocks
   Clock gameClock;
   Clock spawnClock;
-  Clock leftspawnClock;
-  Clock rightspawnClock;
+  Clock leftSpawnClock;
+  Clock rightSpawnClock;
   float bgSpawnInterval = 0.2f;
-  float spawnInterval = 1.f;
+  float leftSpawnInterval = random_spawn_float();
+  float rightSpawnInterval = random_spawn_float();
 
   // start title song
   titleSong.setLooping(true);
@@ -235,8 +238,8 @@ int main() {
       // start drawing - game window
       gameWindow.clear();
 
-      // make left and right hand letters fall
-      if (spawnClock.getElapsedTime().asSeconds() > spawnInterval) {
+      // make left hand letters fall
+      if (leftSpawnClock.getElapsedTime().asSeconds() > leftSpawnInterval) {
 
         // left hand letters
         Text leftLetterText(firacode);
@@ -250,6 +253,18 @@ int main() {
         float randomLeftXvalue = random_left_X_value(gameWindow.getSize().x);
         leftLetterText.setPosition({randomLeftXvalue, -20.f});
 
+        // add left letters to vector with speed
+        float leftLetterSpeed = 400.f;
+        randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
+
+        leftSpawnInterval = random_spawn_float();
+
+        leftSpawnClock.restart();
+      }
+
+      // make right hand letters fall
+      if (rightSpawnClock.getElapsedTime().asSeconds() > rightSpawnInterval) {
+
         // right hand letters
         Text rightLetterText(firacode);
         char randomRightLetter = random_right_letter_generator();
@@ -262,15 +277,13 @@ int main() {
         float randomRightXvalue = random_right_X_value(gameWindow.getSize().x);
         rightLetterText.setPosition({randomRightXvalue, -20.f});
 
-        // add left letters to vector with speed
-        float leftLetterSpeed = 400.f;
-        randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
-
         // add right letters to vector with speed
         float rightLetterSpeed = 400.f;
         randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
 
-        spawnClock.restart();
+        rightSpawnInterval = random_spawn_float();
+
+        rightSpawnClock.restart();
       }
 
       // update all falling letters
