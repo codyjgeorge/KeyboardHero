@@ -105,6 +105,31 @@ int main() {
   menuText.setOrigin({menuTextSize.size.x / 2.f, menuTextSize.size.y / 2.f});
   menuText.setPosition({window.getSize().x / 2.f, window.getSize().y / 1.5f});
 
+  // create left "miss" text
+  Text missLeftText(firacode);
+  missLeftText.setString("Miss");
+  missLeftText.setCharacterSize(42);
+  missLeftText.setFillColor(Color::Red);
+  FloatRect missLeftTextSize = missLeftText.getLocalBounds();
+  missLeftText.setOrigin(
+      {missLeftTextSize.size.x / 2.f, missLeftTextSize.size.y / 2.f});
+  missLeftText.setPosition(
+      {gameWindow.getSize().x / 9.5f, gameWindow.getSize().y / 2.f});
+  bool showLMissMessage = false;
+
+  // create right "miss" text
+  Text missRightText(firacode);
+  missRightText.setString("Miss");
+  missRightText.setCharacterSize(42);
+  missRightText.setFillColor(Color::Red);
+  FloatRect missRightTextSize = missRightText.getLocalBounds();
+  missRightText.setOrigin(
+      {missRightTextSize.size.x / 2.f, missRightTextSize.size.y / 2.f});
+  missRightText.setPosition(
+      {gameWindow.getSize().x - (gameWindow.getSize().x / 10.f),
+       gameWindow.getSize().y / 2.f});
+  bool showRMissMessage = false;
+
   // sound buffers
   SoundBuffer titleSongBuffer;
   SoundBuffer titleTransSoundBuffer;
@@ -127,6 +152,8 @@ int main() {
   Clock spawnClock;
   Clock leftSpawnClock;
   Clock rightSpawnClock;
+  Clock leftMessageClock;
+  Clock rightMessageClock;
   float bgSpawnInterval = 0.2f;
   float leftSpawnInterval = random_spawn_float();
   float rightSpawnInterval = random_spawn_float();
@@ -240,100 +267,106 @@ int main() {
           }
 
         } // END key pressed handling
+
       } // END game window loop event handling
 
       // start drawing - game window
       gameWindow.clear();
 
-      // make left hand letters fall
-      if (leftSpawnClock.getElapsedTime().asSeconds() > leftSpawnInterval) {
+      if (!isPaused) {
 
-        // left hand letters
-        Text leftLetterText(firacode);
-        char randomLeftLetter = random_left_letter_generator();
-        leftLetterText.setString(randomLeftLetter);
-        leftLetterText.setCharacterSize(36);
-        leftLetterText.setFillColor(Color::Green);
-        FloatRect leftLetterTextSize = leftLetterText.getLocalBounds();
-        leftLetterText.setOrigin(
-            {leftLetterTextSize.size.x / 2.f, leftLetterTextSize.size.y / 2.f});
-        float randomLeftXvalue = random_left_X_value(gameWindow.getSize().x);
-        leftLetterText.setPosition({randomLeftXvalue, -20.f});
+        // make left hand letters fall
+        if (leftSpawnClock.getElapsedTime().asSeconds() > leftSpawnInterval) {
 
-        // add left letters to vector with speed
-        float leftLetterSpeed = 400.f;
-        randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
+          // left hand letters
+          Text leftLetterText(firacode);
+          char randomLeftLetter = random_left_letter_generator();
+          leftLetterText.setString(randomLeftLetter);
+          leftLetterText.setCharacterSize(36);
+          leftLetterText.setFillColor(Color::Green);
+          FloatRect leftLetterTextSize = leftLetterText.getLocalBounds();
+          leftLetterText.setOrigin({leftLetterTextSize.size.x / 2.f,
+                                    leftLetterTextSize.size.y / 2.f});
+          float randomLeftXvalue = random_left_X_value(gameWindow.getSize().x);
+          leftLetterText.setPosition({randomLeftXvalue, -20.f});
 
-        // left letter spawn settings
-        leftSpawnInterval = random_spawn_float();
-        leftSpawnClock.restart();
-      }
+          // add left letters to vector with speed
+          float leftLetterSpeed = 400.f;
+          randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
 
-      // make right hand letters fall
-      if (rightSpawnClock.getElapsedTime().asSeconds() > rightSpawnInterval) {
+          // left letter spawn settings
+          leftSpawnInterval = random_spawn_float();
+          leftSpawnClock.restart();
+        }
 
-        // right hand letters
-        Text rightLetterText(firacode);
-        char randomRightLetter = random_right_letter_generator();
-        rightLetterText.setString(randomRightLetter);
-        rightLetterText.setCharacterSize(36);
-        rightLetterText.setFillColor(Color::Green);
-        FloatRect rightLetterTextSize = rightLetterText.getLocalBounds();
-        rightLetterText.setOrigin({rightLetterTextSize.size.x / 2.f,
-                                   rightLetterTextSize.size.y / 2.f});
-        float randomRightXvalue = random_right_X_value(gameWindow.getSize().x);
-        rightLetterText.setPosition({randomRightXvalue, -20.f});
+        // make right hand letters fall
+        if (rightSpawnClock.getElapsedTime().asSeconds() > rightSpawnInterval) {
 
-        // add right letters to vector with speed
-        float rightLetterSpeed = 400.f;
-        randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
+          // right hand letters
+          Text rightLetterText(firacode);
+          char randomRightLetter = random_right_letter_generator();
+          rightLetterText.setString(randomRightLetter);
+          rightLetterText.setCharacterSize(36);
+          rightLetterText.setFillColor(Color::Green);
+          FloatRect rightLetterTextSize = rightLetterText.getLocalBounds();
+          rightLetterText.setOrigin({rightLetterTextSize.size.x / 2.f,
+                                     rightLetterTextSize.size.y / 2.f});
+          float randomRightXvalue =
+              random_right_X_value(gameWindow.getSize().x);
+          rightLetterText.setPosition({randomRightXvalue, -20.f});
 
-        // right letter spawn settings
-        rightSpawnInterval = random_spawn_float();
-        rightSpawnClock.restart();
-      }
+          // add right letters to vector with speed
+          float rightLetterSpeed = 400.f;
+          randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
 
-      // update all falling letters
-      // for each letter object in letters vector
-      for (auto &leftLetter : randomLeftLetters) {
-        leftLetter.randomLeftLetterText.move({0, leftLetter.speed * dt});
-        gameWindow.draw(leftLetter.randomLeftLetterText);
-      }
-      for (auto &rightLetter : randomRightLetters) {
-        rightLetter.randomRightLetterText.move({0, rightLetter.speed * dt});
-        gameWindow.draw(rightLetter.randomRightLetterText);
-      }
+          // right letter spawn settings
+          rightSpawnInterval = random_spawn_float();
+          rightSpawnClock.restart();
+        }
 
-      // pause = [ON]
-      if (isPaused == true) {
+        // update all falling letters
+        // for each letter object in letters vector
         for (auto &leftLetter : randomLeftLetters) {
-          leftSpawnClock.stop();
-          leftLetter.speed = 0;
           leftLetter.randomLeftLetterText.move({0, leftLetter.speed * dt});
           gameWindow.draw(leftLetter.randomLeftLetterText);
         }
-
         for (auto &rightLetter : randomRightLetters) {
-          rightSpawnClock.stop();
-          rightLetter.speed = 0;
           rightLetter.randomRightLetterText.move({0, rightLetter.speed * dt});
           gameWindow.draw(rightLetter.randomRightLetterText);
         }
-      }
 
-      // delete struct at index 0 when it goes out of bounds
-      if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
-          gameWindow.getSize().y) {
-        randomLeftLetters.erase(randomLeftLetters.begin());
-        cout << "Miss Left" << endl;
-      }
-      if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
-          gameWindow.getSize().y) {
-        randomRightLetters.erase(randomRightLetters.begin());
-        cout << "Miss Right" << endl;
-      }
+        // delete struct at index 0 when it goes out of bounds
+        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
+            gameWindow.getSize().y) {
+          randomLeftLetters.erase(randomLeftLetters.begin());
+          leftMessageClock.restart();
+          showLMissMessage = true;
+        }
+        if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
+            gameWindow.getSize().y) {
+          randomRightLetters.erase(randomRightLetters.begin());
+          rightMessageClock.restart();
+          showRMissMessage = true;
+        }
 
-      gameWindow.display();
+        // show left "miss" message
+        if (showLMissMessage) {
+          gameWindow.draw(missLeftText);
+          if (leftMessageClock.getElapsedTime().asSeconds() >= 0.25f) {
+            showLMissMessage = false;
+          }
+        }
+
+        // show right "miss" message
+        if (showRMissMessage) {
+          gameWindow.draw(missRightText);
+          if (rightMessageClock.getElapsedTime().asSeconds() >= 0.25f) {
+            showRMissMessage = false;
+          }
+        }
+
+        gameWindow.display();
+      } // END !isPaused
     } // END delta time
   } // END game window loop
 
