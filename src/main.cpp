@@ -61,6 +61,8 @@ struct randomRightLetter {
 };
 vector<randomRightLetter> randomRightLetters;
 
+bool isPaused = false;
+
 int main() {
 
   // settings
@@ -227,9 +229,14 @@ int main() {
         // keyboard input - key pressed //
         if (auto *key = event->getIf<sf::Event::KeyPressed>()) {
 
-          // Q -> quit
-          if (key->scancode == Keyboard::Scancode::Q) {
+          // Escape -> quit window
+          if (key->scancode == Keyboard::Scancode::Escape) {
             gameWindow.close();
+          }
+
+          // Tab -> pause window
+          if (key->scancode == Keyboard::Scancode::Tab) {
+            isPaused = !isPaused;
           }
 
         } // END key pressed handling
@@ -257,8 +264,8 @@ int main() {
         float leftLetterSpeed = 400.f;
         randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
 
+        // left letter spawn settings
         leftSpawnInterval = random_spawn_float();
-
         leftSpawnClock.restart();
       }
 
@@ -281,12 +288,13 @@ int main() {
         float rightLetterSpeed = 400.f;
         randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
 
+        // right letter spawn settings
         rightSpawnInterval = random_spawn_float();
-
         rightSpawnClock.restart();
       }
 
       // update all falling letters
+      // for each letter object in letters vector
       for (auto &leftLetter : randomLeftLetters) {
         leftLetter.randomLeftLetterText.move({0, leftLetter.speed * dt});
         gameWindow.draw(leftLetter.randomLeftLetterText);
@@ -294,6 +302,30 @@ int main() {
       for (auto &rightLetter : randomRightLetters) {
         rightLetter.randomRightLetterText.move({0, rightLetter.speed * dt});
         gameWindow.draw(rightLetter.randomRightLetterText);
+      }
+
+      // pause = [ON]
+      if (isPaused == true) {
+        for (auto &leftLetter : randomLeftLetters) {
+          leftSpawnClock.stop();
+          leftLetter.speed = 0;
+          leftLetter.randomLeftLetterText.move({0, leftLetter.speed * dt});
+          gameWindow.draw(leftLetter.randomLeftLetterText);
+        }
+
+        for (auto &rightLetter : randomRightLetters) {
+          rightSpawnClock.stop();
+          rightLetter.speed = 0;
+          rightLetter.randomRightLetterText.move({0, rightLetter.speed * dt});
+          gameWindow.draw(rightLetter.randomRightLetterText);
+        }
+      }
+
+      // delete struct at index 0 when it goes out of bounds
+      if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
+          gameWindow.getSize().y) {
+        randomLeftLetters.erase(randomLeftLetters.begin());
+        cout << "Miss" << endl;
       }
 
       gameWindow.display();
