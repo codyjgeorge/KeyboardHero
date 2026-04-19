@@ -325,7 +325,12 @@ int main() {
       if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
           gameWindow.getSize().y) {
         randomLeftLetters.erase(randomLeftLetters.begin());
-        cout << "Miss" << endl;
+        cout << "Miss Left" << endl;
+      }
+      if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
+          gameWindow.getSize().y) {
+        randomRightLetters.erase(randomRightLetters.begin());
+        cout << "Miss Right" << endl;
       }
 
       gameWindow.display();
