@@ -7,6 +7,7 @@
 using namespace sf;
 using namespace std;
 
+// random letter functions
 char random_letter_generator() { return 'A' + rand() % 26; }
 
 char random_left_letter_generator() {
@@ -23,6 +24,7 @@ char random_right_letter_generator() {
   return rightHandLetters[index];
 }
 
+// random x value functions
 float random_X_value(int windowSize) { return rand() % (windowSize + 1); }
 
 float random_left_X_value(int windowSize) {
@@ -129,6 +131,17 @@ int main() {
       {gameWindow.getSize().x - (gameWindow.getSize().x / 10.f),
        gameWindow.getSize().y / 2.f});
   bool showRMissMessage = false;
+
+  // create target bar for key press
+  RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 38.f});
+  targetBox.setOrigin(
+      {targetBox.getSize().x / 2.f, targetBox.getSize().y / 2.f});
+  targetBox.setPosition(
+      {gameWindow.getSize().x / 2.f,
+       gameWindow.getSize().y - (gameWindow.getSize().y / 8.5f)});
+  targetBox.setOutlineColor(Color::Green);
+  targetBox.setOutlineThickness(1.f);
+  targetBox.setFillColor(Color::Transparent);
 
   // sound buffers
   SoundBuffer titleSongBuffer;
@@ -274,6 +287,8 @@ int main() {
       gameWindow.clear();
 
       if (!isPaused) {
+
+        gameWindow.draw(targetBox);
 
         // make left hand letters fall
         if (leftSpawnClock.getElapsedTime().asSeconds() > leftSpawnInterval) {
