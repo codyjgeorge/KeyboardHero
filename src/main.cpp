@@ -11,15 +11,15 @@ using namespace std;
 char random_letter_generator() { return 'A' + rand() % 26; }
 
 char random_left_letter_generator() {
-  vector<char> leftHandLetters = {'q', 'w', 'e', 'r', 't', 'a', 's', 'd',
-                                  'f', 'g', 'z', 'x', 'c', 'v', 'b'};
+  vector<char> leftHandLetters = {'Q', 'W', 'E', 'R', 'T', 'A', 'S',
+                                  'D', 'F', 'G', 'Z', 'X', 'C', 'V'};
   int index = rand() % leftHandLetters.size();
   return leftHandLetters[index];
 }
 
 char random_right_letter_generator() {
-  vector<char> rightHandLetters = {'y', 'u', 'i', 'o', 'p', 'h',
-                                   'j', 'k', 'l', 'n', 'm', 'b'};
+  vector<char> rightHandLetters = {'Y', 'U', 'I', 'O', 'P', 'H',
+                                   'J', 'K', 'L', 'N', 'M', 'B'};
   int index = rand() % rightHandLetters.size();
   return rightHandLetters[index];
 }
@@ -54,12 +54,14 @@ vector<randomLetter> randomLetters;
 struct randomLeftLetter {
   Text randomLeftLetterText;
   float speed;
+  float center = randomLeftLetterText.getLocalBounds().getCenter().y;
 };
 vector<randomLeftLetter> randomLeftLetters;
 
 struct randomRightLetter {
   Text randomRightLetterText;
   float speed;
+  float center = randomRightLetterText.getLocalBounds().getCenter().y;
 };
 vector<randomRightLetter> randomRightLetters;
 
@@ -132,6 +134,31 @@ int main() {
        gameWindow.getSize().y / 2.f});
   bool showRMissMessage = false;
 
+  // create left "correct!" text
+  Text correctLeftText(firacode);
+  correctLeftText.setString("Correct!");
+  correctLeftText.setCharacterSize(42);
+  correctLeftText.setFillColor(Color::Cyan);
+  FloatRect correctLeftTextSize = correctLeftText.getLocalBounds();
+  correctLeftText.setOrigin(
+      {correctLeftTextSize.size.x / 2.f, correctLeftTextSize.size.y / 2.f});
+  correctLeftText.setPosition(
+      {gameWindow.getSize().x / 9.5f, gameWindow.getSize().y / 2.f});
+  bool showLCorrectMessage = false;
+
+  // create right "correct!" text
+  Text correctRightText(firacode);
+  correctRightText.setString("Correct!");
+  correctRightText.setCharacterSize(42);
+  correctRightText.setFillColor(Color::Cyan);
+  FloatRect correctRightTextSize = correctRightText.getLocalBounds();
+  correctRightText.setOrigin(
+      {correctRightTextSize.size.x / 2.f, correctRightTextSize.size.y / 2.f});
+  correctRightText.setPosition(
+      {gameWindow.getSize().x - (gameWindow.getSize().x / 10.f),
+       gameWindow.getSize().y / 2.f});
+  bool showRCorrectMessage = false;
+
   // create target bar for key press
   RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 38.f});
   targetBox.setOrigin(
@@ -142,6 +169,8 @@ int main() {
   targetBox.setOutlineColor(Color::Green);
   targetBox.setOutlineThickness(1.f);
   targetBox.setFillColor(Color::Transparent);
+  bool inTargetL = false;
+  bool inTargetR = false;
 
   // sound buffers
   SoundBuffer titleSongBuffer;
@@ -279,6 +308,78 @@ int main() {
             isPaused = !isPaused;
           }
 
+          // left hand switch
+          switch (key->scancode) {
+          case Keyboard::Scancode::Q:
+          case Keyboard::Scancode::W:
+          case Keyboard::Scancode::E:
+          case Keyboard::Scancode::R:
+          case Keyboard::Scancode::T:
+          case Keyboard::Scancode::A:
+          case Keyboard::Scancode::S:
+          case Keyboard::Scancode::D:
+          case Keyboard::Scancode::F:
+          case Keyboard::Scancode::G:
+          case Keyboard::Scancode::Z:
+          case Keyboard::Scancode::X:
+          case Keyboard::Scancode::C:
+          case Keyboard::Scancode::V:
+            if (inTargetL == false) {
+              showLMissMessage = true;
+              randomLeftLetters.erase(randomLeftLetters.begin());
+              // if theres no letters in queue to delete (spamming keys)
+              if (randomLeftLetters.size() < 1) {
+                showLMissMessage = true;
+              }
+              leftMessageClock.restart();
+            }
+            if (inTargetL &&
+                getDescription(key->scancode) ==
+                    randomLeftLetters[0].randomLeftLetterText.getString()) {
+              showLCorrectMessage = true;
+              randomLeftLetters.erase(randomLeftLetters.begin());
+              leftMessageClock.restart();
+            }
+            break;
+          default:
+            break;
+          }
+
+          // right hand switch
+          switch (key->scancode) {
+          case Keyboard::Scancode::Y:
+          case Keyboard::Scancode::U:
+          case Keyboard::Scancode::I:
+          case Keyboard::Scancode::O:
+          case Keyboard::Scancode::P:
+          case Keyboard::Scancode::H:
+          case Keyboard::Scancode::J:
+          case Keyboard::Scancode::K:
+          case Keyboard::Scancode::L:
+          case Keyboard::Scancode::N:
+          case Keyboard::Scancode::M:
+          case Keyboard::Scancode::B:
+            if (inTargetR == false) {
+              showRMissMessage = true;
+              randomRightLetters.erase(randomRightLetters.begin());
+              // if theres no letters in queue to delete (spamming keys)
+              if (randomRightLetters.size() < 1) {
+                showRMissMessage = true;
+              }
+              rightMessageClock.restart();
+            }
+            if (inTargetR &&
+                getDescription(key->scancode) ==
+                    randomRightLetters[0].randomRightLetterText.getString()) {
+              showRCorrectMessage = true;
+              randomRightLetters.erase(randomRightLetters.begin());
+              rightMessageClock.restart();
+            }
+            break;
+          default:
+            break;
+          }
+
         } // END key pressed handling
 
       } // END game window loop event handling
@@ -379,6 +480,50 @@ int main() {
             showRMissMessage = false;
           }
         }
+
+        // show left "correct!" message
+        if (showLCorrectMessage) {
+          gameWindow.draw(correctLeftText);
+          if (leftMessageClock.getElapsedTime().asSeconds() >= 0.25f) {
+            showLCorrectMessage = false;
+          }
+        }
+
+        // show right "correct!" message
+        if (showRCorrectMessage) {
+          gameWindow.draw(correctRightText);
+          if (rightMessageClock.getElapsedTime().asSeconds() >= 0.25f) {
+            showRCorrectMessage = false;
+          }
+        }
+
+        // left letter collisions with target box
+        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
+                (targetBox.getPosition().y - 20) &&
+            randomLeftLetters[0].randomLeftLetterText.getPosition().y <=
+                (targetBox.getPosition().y + 20)) {
+          inTargetL = true;
+        }
+        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
+                (targetBox.getPosition().y - 20) or
+            randomLeftLetters[0].randomLeftLetterText.getPosition().y >
+                (targetBox.getPosition().y + 20)) {
+          inTargetL = false;
+        };
+
+        // right letter collisions with target box
+        if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
+                (targetBox.getPosition().y - 20) &&
+            randomRightLetters[0].randomRightLetterText.getPosition().y <=
+                (targetBox.getPosition().y + 20)) {
+          inTargetR = true;
+        }
+        if (randomRightLetters[0].randomRightLetterText.getPosition().y <
+                (targetBox.getPosition().y - 20) or
+            randomRightLetters[0].randomRightLetterText.getPosition().y >
+                (targetBox.getPosition().y + 20)) {
+          inTargetR = false;
+        };
 
         gameWindow.display();
       } // END !isPaused
