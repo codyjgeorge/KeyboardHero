@@ -547,29 +547,29 @@ int main() {
 
         // left letter collisions with target box
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 99) &&
+                (targetBox.getPosition().y - 54) &&
             randomLeftLetters[0].randomLeftLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 99)) {
+                (targetBox.getPosition().y + 36)) {
           inTargetL = true;
         }
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
-                (targetBox.getPosition().y - 99) or
+                (targetBox.getPosition().y - 54) or
             randomLeftLetters[0].randomLeftLetterText.getPosition().y >
-                (targetBox.getPosition().y + 99)) {
+                (targetBox.getPosition().y + 36)) {
           inTargetL = false;
         };
 
         // right letter collisions with target box
         if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 99) &&
+                (targetBox.getPosition().y - 54) &&
             randomRightLetters[0].randomRightLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 99)) {
+                (targetBox.getPosition().y + 36)) {
           inTargetR = true;
         }
         if (randomRightLetters[0].randomRightLetterText.getPosition().y <
-                (targetBox.getPosition().y - 99) or
+                (targetBox.getPosition().y - 54) or
             randomRightLetters[0].randomRightLetterText.getPosition().y >
-                (targetBox.getPosition().y + 99)) {
+                (targetBox.getPosition().y + 36)) {
           inTargetR = false;
         };
 
