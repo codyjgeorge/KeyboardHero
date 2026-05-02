@@ -325,11 +325,12 @@ int main() {
           case Keyboard::Scancode::C:
           case Keyboard::Scancode::V:
             if (inTargetL == false) {
-              showLMissMessage = true;
-              randomLeftLetters.erase(randomLeftLetters.begin());
               // if theres no letters in queue to delete (spamming keys)
               if (randomLeftLetters.size() < 1) {
                 showLMissMessage = true;
+              } else {
+                showLMissMessage = true;
+                randomLeftLetters.erase(randomLeftLetters.begin());
               }
               leftMessageClock.restart();
             }
@@ -360,11 +361,12 @@ int main() {
           case Keyboard::Scancode::M:
           case Keyboard::Scancode::B:
             if (inTargetR == false) {
-              showRMissMessage = true;
-              randomRightLetters.erase(randomRightLetters.begin());
               // if theres no letters in queue to delete (spamming keys)
               if (randomRightLetters.size() < 1) {
                 showRMissMessage = true;
+              } else {
+                showRMissMessage = true;
+                randomRightLetters.erase(randomRightLetters.begin());
               }
               rightMessageClock.restart();
             }
