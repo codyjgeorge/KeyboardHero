@@ -101,13 +101,23 @@ int main() {
 
   // create menu text
   Text menuText(firacode);
-  menuText.setString("ENTER -> Play\n\nR -> Rules\n\nS -> Settings\n\nC -> "
-                     "Controls\n\nQ -> Quit");
+  menuText.setString("ENTER -> Play\n\n  Q   -> Quit");
   menuText.setCharacterSize(36);
-  menuText.setFillColor(Color::White);
+  menuText.setFillColor(Color::Green);
   FloatRect menuTextSize = menuText.getLocalBounds();
   menuText.setOrigin({menuTextSize.size.x / 2.f, menuTextSize.size.y / 2.f});
   menuText.setPosition({window.getSize().x / 2.f, window.getSize().y / 1.5f});
+
+  // create game menu text
+  Text gamemenuText(firacode);
+  gamemenuText.setString("TAB -> Pause\n\nESC -> Quit");
+  gamemenuText.setCharacterSize(36);
+  gamemenuText.setFillColor(Color::White);
+  FloatRect gamemenuTextSize = gamemenuText.getLocalBounds();
+  gamemenuText.setOrigin(
+      {gamemenuTextSize.size.x / 2.f, gamemenuTextSize.size.y / 2.f});
+  gamemenuText.setPosition(
+      {gameWindow.getSize().x / 2.f, gameWindow.getSize().y / 2.f});
 
   // create left "miss" text
   Text missLeftText(firacode);
@@ -160,7 +170,7 @@ int main() {
   bool showRCorrectMessage = false;
 
   // create target bar for key press
-  RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 38.f});
+  RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 72.f});
   targetBox.setOrigin(
       {targetBox.getSize().x / 2.f, targetBox.getSize().y / 2.f});
   targetBox.setPosition(
@@ -298,7 +308,7 @@ int main() {
         // keyboard input - key pressed //
         if (auto *key = event->getIf<sf::Event::KeyPressed>()) {
 
-          // Escape -> quit window
+          // Escape -> quit
           if (key->scancode == Keyboard::Scancode::Escape) {
             gameWindow.close();
           }
@@ -409,7 +419,7 @@ int main() {
           leftLetterText.setPosition({randomLeftXvalue, -20.f});
 
           // add left letters to vector with speed
-          float leftLetterSpeed = 400.f;
+          float leftLetterSpeed = 300.f;
           randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
 
           // left letter spawn settings
@@ -434,7 +444,7 @@ int main() {
           rightLetterText.setPosition({randomRightXvalue, -20.f});
 
           // add right letters to vector with speed
-          float rightLetterSpeed = 400.f;
+          float rightLetterSpeed = 300.f;
           randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
 
           // right letter spawn settings
@@ -501,32 +511,33 @@ int main() {
 
         // left letter collisions with target box
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 20) &&
+                (targetBox.getPosition().y - 99) &&
             randomLeftLetters[0].randomLeftLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 20)) {
+                (targetBox.getPosition().y + 99)) {
           inTargetL = true;
         }
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
-                (targetBox.getPosition().y - 20) or
+                (targetBox.getPosition().y - 99) or
             randomLeftLetters[0].randomLeftLetterText.getPosition().y >
-                (targetBox.getPosition().y + 20)) {
+                (targetBox.getPosition().y + 99)) {
           inTargetL = false;
         };
 
         // right letter collisions with target box
         if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 20) &&
+                (targetBox.getPosition().y - 99) &&
             randomRightLetters[0].randomRightLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 20)) {
+                (targetBox.getPosition().y + 99)) {
           inTargetR = true;
         }
         if (randomRightLetters[0].randomRightLetterText.getPosition().y <
-                (targetBox.getPosition().y - 20) or
+                (targetBox.getPosition().y - 99) or
             randomRightLetters[0].randomRightLetterText.getPosition().y >
-                (targetBox.getPosition().y + 20)) {
+                (targetBox.getPosition().y + 99)) {
           inTargetR = false;
         };
 
+        gameWindow.draw(gamemenuText);
         gameWindow.display();
       } // END !isPaused
     } // END delta time
