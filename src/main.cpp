@@ -43,7 +43,15 @@ float random_right_X_value(int windowSize) {
 
 float random_speed() { return 300 + rand() % 601; }
 
-float random_spawn_float() { return 0.5 + (rand() % 151) / 100.0; }
+float random_spawn_float_h() {
+  return 0.5 + (rand() % 151) / 100.0;
+} // 0.5 - 2.0 step 0.01
+float random_spawn_float_m() {
+  return 1.5 + (rand() % 151) / 100.0;
+} // 1.5 - 3.0 step 0.01
+float random_spawn_float_e() {
+  return 2.5 + (rand() % 151) / 100.0;
+} // 2.5 - 4.0 step 0.01
 
 struct randomLetter {
   Text randomLetterText;
@@ -101,7 +109,8 @@ int main() {
 
   // create menu text
   Text menuText(firacode);
-  menuText.setString("ENTER -> Play\n\n  Q   -> Quit");
+  menuText.setString("1 -> Easy\n\n2 -> Medium\n\n3 -> "
+                     "Hard\n\nQ -> Quit");
   menuText.setCharacterSize(36);
   menuText.setFillColor(Color::Green);
   FloatRect menuTextSize = menuText.getLocalBounds();
@@ -207,8 +216,12 @@ int main() {
   Clock leftMessageClock;
   Clock rightMessageClock;
   float bgSpawnInterval = 0.2f;
-  float leftSpawnInterval = random_spawn_float();
-  float rightSpawnInterval = random_spawn_float();
+
+  // left and right letter attribute declarations
+  float leftLetterSpeed;
+  float rightLetterSpeed;
+  float leftSpawnInterval;
+  float rightSpawnInterval;
 
   // start title song
   titleSong.setLooping(true);
@@ -237,14 +250,43 @@ int main() {
           // Q -> quit
           if (key->scancode == Keyboard::Scancode::Q) {
             window.close();
+            gameWindow.close();
             titleSong.stop();
           }
-          // ENTER -> close menu window, begin game window
-          if (key->scancode == Keyboard::Scancode::Enter) {
+          // 1 -> close menu window, begin game window in easy
+          if (key->scancode == Keyboard::Scancode::Num1) {
             window.close();
             titleSong.stop();
             titleTransSound.play();
             gameWindow.display();
+            leftSpawnInterval = random_spawn_float_e();
+            leftLetterSpeed = 200.f;
+            rightSpawnInterval = random_spawn_float_e();
+            rightLetterSpeed = 200.f;
+          }
+
+          // 2 -> close menu window, begin game window in medium
+          if (key->scancode == Keyboard::Scancode::Num2) {
+            window.close();
+            titleSong.stop();
+            titleTransSound.play();
+            gameWindow.display();
+            leftSpawnInterval = random_spawn_float_m();
+            leftLetterSpeed = 300.f;
+            rightSpawnInterval = random_spawn_float_m();
+            rightLetterSpeed = 300.f;
+          }
+
+          // 3 -> close menu window, begin game window in hard
+          if (key->scancode == Keyboard::Scancode::Num3) {
+            window.close();
+            titleSong.stop();
+            titleTransSound.play();
+            gameWindow.display();
+            leftSpawnInterval = random_spawn_float_h();
+            leftLetterSpeed = 400.f;
+            rightSpawnInterval = random_spawn_float_h();
+            rightLetterSpeed = 400.f;
           }
         } // END key pressed handling
       } // END game loop event handling
@@ -418,12 +460,9 @@ int main() {
           float randomLeftXvalue = random_left_X_value(gameWindow.getSize().x);
           leftLetterText.setPosition({randomLeftXvalue, -20.f});
 
-          // add left letters to vector with speed
-          float leftLetterSpeed = 300.f;
+          // add left letters to vector
           randomLeftLetters.push_back({leftLetterText, leftLetterSpeed});
 
-          // left letter spawn settings
-          leftSpawnInterval = random_spawn_float();
           leftSpawnClock.restart();
         }
 
@@ -443,12 +482,9 @@ int main() {
               random_right_X_value(gameWindow.getSize().x);
           rightLetterText.setPosition({randomRightXvalue, -20.f});
 
-          // add right letters to vector with speed
-          float rightLetterSpeed = 300.f;
+          // add right letters to vector
           randomRightLetters.push_back({rightLetterText, rightLetterSpeed});
 
-          // right letter spawn settings
-          rightSpawnInterval = random_spawn_float();
           rightSpawnClock.restart();
         }
 
