@@ -131,7 +131,7 @@ int main() {
   // create left "miss" text
   Text missLeftText(firacode);
   missLeftText.setString("Miss");
-  missLeftText.setCharacterSize(42);
+  missLeftText.setCharacterSize(18);
   missLeftText.setFillColor(Color::Red);
   FloatRect missLeftTextSize = missLeftText.getLocalBounds();
   missLeftText.setOrigin(
@@ -143,7 +143,7 @@ int main() {
   // create right "miss" text
   Text missRightText(firacode);
   missRightText.setString("Miss");
-  missRightText.setCharacterSize(42);
+  missRightText.setCharacterSize(18);
   missRightText.setFillColor(Color::Red);
   FloatRect missRightTextSize = missRightText.getLocalBounds();
   missRightText.setOrigin(
@@ -156,7 +156,7 @@ int main() {
   // create left "correct!" text
   Text correctLeftText(firacode);
   correctLeftText.setString("Correct!");
-  correctLeftText.setCharacterSize(42);
+  correctLeftText.setCharacterSize(18);
   correctLeftText.setFillColor(Color::Cyan);
   FloatRect correctLeftTextSize = correctLeftText.getLocalBounds();
   correctLeftText.setOrigin(
@@ -168,7 +168,7 @@ int main() {
   // create right "correct!" text
   Text correctRightText(firacode);
   correctRightText.setString("Correct!");
-  correctRightText.setCharacterSize(42);
+  correctRightText.setCharacterSize(18);
   correctRightText.setFillColor(Color::Cyan);
   FloatRect correctRightTextSize = correctRightText.getLocalBounds();
   correctRightText.setOrigin(
@@ -177,6 +177,12 @@ int main() {
       {gameWindow.getSize().x - (gameWindow.getSize().x / 10.f),
        gameWindow.getSize().y / 2.f});
   bool showRCorrectMessage = false;
+
+  // counters
+  int leftStreak = 0;
+  int rightStreak = 0;
+  int leftMissStreak = 0;
+  int rightMissStreak = 0;
 
   // create target bar for key press
   RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 72.f});
