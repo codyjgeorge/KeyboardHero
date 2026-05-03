@@ -185,6 +185,30 @@ int main() {
   int leftMissStreak = 0;
   int rightMissStreak = 0;
 
+  // create left score streak text
+  Text leftStreakText(firacode);
+  leftStreakText.setString("Streak: " + to_string(leftStreak));
+  leftStreakText.setCharacterSize(36);
+  leftStreakText.setFillColor(Color::White);
+  FloatRect leftStreakTextSize = leftStreakText.getLocalBounds();
+  leftStreakText.setOrigin(
+      {leftStreakTextSize.size.x / 2.f, leftStreakTextSize.size.y / 2.f});
+  leftStreakText.setPosition(
+      {gameWindow.getSize().x / 4.f,
+       gameWindow.getSize().y - (gameWindow.getSize().y / 20.f)});
+
+  // create right score streak text
+  Text rightStreakText(firacode);
+  rightStreakText.setString("Streak: " + to_string(rightStreak));
+  rightStreakText.setCharacterSize(36);
+  rightStreakText.setFillColor(Color::White);
+  FloatRect rightStreakTextSize = rightStreakText.getLocalBounds();
+  rightStreakText.setOrigin(
+      {rightStreakTextSize.size.x / 2.f, rightStreakTextSize.size.y / 2.f});
+  rightStreakText.setPosition(
+      {gameWindow.getSize().x - (gameWindow.getSize().x / 4.f),
+       gameWindow.getSize().y - (gameWindow.getSize().y / 20.f)});
+
   // create target bar for key press
   RectangleShape targetBox({static_cast<float>(gameWindow.getSize().x), 72.f});
   targetBox.setOrigin(
@@ -660,7 +684,11 @@ int main() {
           }
         }
 
+        leftStreakText.setString("Streak: " + to_string(leftStreak));
+        rightStreakText.setString("Streak: " + to_string(rightStreak));
         gameWindow.draw(gamemenuText);
+        gameWindow.draw(leftStreakText);
+        gameWindow.draw(rightStreakText);
         gameWindow.display();
       } // END !isPaused
     } // END delta time
