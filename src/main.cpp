@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include <ctime>
+#include <ios>
 #include <iostream>
 
 using namespace sf;
@@ -131,7 +132,7 @@ int main() {
   // create left "miss" text
   Text missLeftText(firacode);
   missLeftText.setString("Miss");
-  missLeftText.setCharacterSize(18);
+  missLeftText.setCharacterSize(24);
   missLeftText.setFillColor(Color::Red);
   FloatRect missLeftTextSize = missLeftText.getLocalBounds();
   missLeftText.setOrigin(
@@ -143,7 +144,7 @@ int main() {
   // create right "miss" text
   Text missRightText(firacode);
   missRightText.setString("Miss");
-  missRightText.setCharacterSize(18);
+  missRightText.setCharacterSize(24);
   missRightText.setFillColor(Color::Red);
   FloatRect missRightTextSize = missRightText.getLocalBounds();
   missRightText.setOrigin(
@@ -156,7 +157,7 @@ int main() {
   // create left "correct!" text
   Text correctLeftText(firacode);
   correctLeftText.setString("Correct!");
-  correctLeftText.setCharacterSize(18);
+  correctLeftText.setCharacterSize(24);
   correctLeftText.setFillColor(Color::Cyan);
   FloatRect correctLeftTextSize = correctLeftText.getLocalBounds();
   correctLeftText.setOrigin(
@@ -168,7 +169,7 @@ int main() {
   // create right "correct!" text
   Text correctRightText(firacode);
   correctRightText.setString("Correct!");
-  correctRightText.setCharacterSize(18);
+  correctRightText.setCharacterSize(24);
   correctRightText.setFillColor(Color::Cyan);
   FloatRect correctRightTextSize = correctRightText.getLocalBounds();
   correctRightText.setOrigin(
@@ -390,11 +391,37 @@ int main() {
                 showLMissMessage = true;
                 randomLeftLetters.erase(randomLeftLetters.begin());
               }
+              // increase/decrease counters
+              leftMissStreak += 1;
+              leftStreak = 0;
+              // change size of message
+              if (leftMissStreak <= 3) {
+                missLeftText.setCharacterSize(24);
+              }
+              if (leftMissStreak > 3 && leftMissStreak <= 6) {
+                missLeftText.setCharacterSize(30);
+              }
+              if (leftMissStreak > 6) {
+                missLeftText.setCharacterSize(36);
+              }
               leftMessageClock.restart();
             }
             if (inTargetL &&
                 getDescription(key->scancode) ==
                     randomLeftLetters[0].randomLeftLetterText.getString()) {
+              // increase/decrease counters
+              leftStreak += 1;
+              leftMissStreak = 0;
+              // change size of message
+              if (leftStreak <= 3) {
+                correctLeftText.setCharacterSize(24);
+              }
+              if (leftStreak > 3 && leftStreak <= 6) {
+                correctLeftText.setCharacterSize(30);
+              }
+              if (leftStreak > 6) {
+                correctLeftText.setCharacterSize(36);
+              }
               showLCorrectMessage = true;
               randomLeftLetters.erase(randomLeftLetters.begin());
               leftMessageClock.restart();
@@ -426,6 +453,19 @@ int main() {
                 showRMissMessage = true;
                 randomRightLetters.erase(randomRightLetters.begin());
               }
+              // increase/decrease counters
+              rightMissStreak += 1;
+              rightStreak = 0;
+              // change size of message
+              if (rightMissStreak <= 3) {
+                missRightText.setCharacterSize(24);
+              }
+              if (rightMissStreak > 3 && rightMissStreak <= 6) {
+                missRightText.setCharacterSize(30);
+              }
+              if (rightMissStreak > 6) {
+                missRightText.setCharacterSize(36);
+              }
               rightMessageClock.restart();
             }
             if (inTargetR &&
@@ -433,6 +473,19 @@ int main() {
                     randomRightLetters[0].randomRightLetterText.getString()) {
               showRCorrectMessage = true;
               randomRightLetters.erase(randomRightLetters.begin());
+              // increase/decrease counters
+              rightStreak += 1;
+              rightMissStreak = 0;
+              // change size of message
+              if (rightStreak <= 3) {
+                correctRightText.setCharacterSize(24);
+              }
+              if (rightStreak > 3 && rightStreak <= 6) {
+                correctRightText.setCharacterSize(30);
+              }
+              if (rightStreak > 6) {
+                correctRightText.setCharacterSize(36);
+              }
               rightMessageClock.restart();
             }
             break;
@@ -506,18 +559,74 @@ int main() {
         }
 
         // delete struct at index 0 when it goes out of bounds
+        // left
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
             gameWindow.getSize().y) {
           randomLeftLetters.erase(randomLeftLetters.begin());
+          // increase/decrease counters
+          leftMissStreak += 1;
+          leftStreak = 0;
+          // change size of message
+          if (leftMissStreak <= 3) {
+            missLeftText.setCharacterSize(24);
+          }
+          if (leftMissStreak > 3 && leftMissStreak <= 6) {
+            missLeftText.setCharacterSize(30);
+          }
+          if (leftMissStreak > 6) {
+            missLeftText.setCharacterSize(36);
+          }
           leftMessageClock.restart();
           showLMissMessage = true;
         }
+        // right
         if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
             gameWindow.getSize().y) {
           randomRightLetters.erase(randomRightLetters.begin());
+          // increase/decrease counters
+          rightMissStreak += 1;
+          rightStreak = 0;
+          // change size of message
+          if (rightMissStreak <= 3) {
+            missRightText.setCharacterSize(24);
+          }
+          if (rightMissStreak > 3 && rightMissStreak <= 6) {
+            missRightText.setCharacterSize(30);
+          }
+          if (rightMissStreak > 6) {
+            missRightText.setCharacterSize(36);
+          }
           rightMessageClock.restart();
           showRMissMessage = true;
         }
+
+        // left letter collisions with target box
+        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
+                (targetBox.getPosition().y - 54) &&
+            randomLeftLetters[0].randomLeftLetterText.getPosition().y <=
+                (targetBox.getPosition().y + 36)) {
+          inTargetL = true;
+        }
+        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
+                (targetBox.getPosition().y - 54) or
+            randomLeftLetters[0].randomLeftLetterText.getPosition().y >
+                (targetBox.getPosition().y + 36)) {
+          inTargetL = false;
+        };
+
+        // right letter collisions with target box
+        if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
+                (targetBox.getPosition().y - 54) &&
+            randomRightLetters[0].randomRightLetterText.getPosition().y <=
+                (targetBox.getPosition().y + 36)) {
+          inTargetR = true;
+        }
+        if (randomRightLetters[0].randomRightLetterText.getPosition().y <
+                (targetBox.getPosition().y - 54) or
+            randomRightLetters[0].randomRightLetterText.getPosition().y >
+                (targetBox.getPosition().y + 36)) {
+          inTargetR = false;
+        };
 
         // show left "miss" message
         if (showLMissMessage) {
@@ -550,34 +659,6 @@ int main() {
             showRCorrectMessage = false;
           }
         }
-
-        // left letter collisions with target box
-        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 54) &&
-            randomLeftLetters[0].randomLeftLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 36)) {
-          inTargetL = true;
-        }
-        if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
-                (targetBox.getPosition().y - 54) or
-            randomLeftLetters[0].randomLeftLetterText.getPosition().y >
-                (targetBox.getPosition().y + 36)) {
-          inTargetL = false;
-        };
-
-        // right letter collisions with target box
-        if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
-                (targetBox.getPosition().y - 54) &&
-            randomRightLetters[0].randomRightLetterText.getPosition().y <=
-                (targetBox.getPosition().y + 36)) {
-          inTargetR = true;
-        }
-        if (randomRightLetters[0].randomRightLetterText.getPosition().y <
-                (targetBox.getPosition().y - 54) or
-            randomRightLetters[0].randomRightLetterText.getPosition().y >
-                (targetBox.getPosition().y + 36)) {
-          inTargetR = false;
-        };
 
         gameWindow.draw(gamemenuText);
         gameWindow.display();
