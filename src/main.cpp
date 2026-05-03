@@ -225,6 +225,9 @@ int main() {
   // sound buffers
   SoundBuffer titleSongBuffer;
   SoundBuffer titleTransSoundBuffer;
+  SoundBuffer gameSongBuffer;
+  SoundBuffer correctSoundBuffer;
+  SoundBuffer missSoundBuffer;
 
   // load to buffers
   if (!titleSongBuffer.loadFromFile("assets/Audio/StartMenu-Song.wav")) {
@@ -234,10 +237,22 @@ int main() {
           "assets/Audio/StartMenuTransition-Sound.wav")) {
     cerr << "Failed to load title transition sound" << endl;
   }
+  if (!gameSongBuffer.loadFromFile("assets/Audio/gameSong1.wav")) {
+    cerr << "Failed to load game song" << endl;
+  }
+  if (!correctSoundBuffer.loadFromFile("assets/Audio/correctHit.wav")) {
+    cerr << "Failed to load correct hit sound" << endl;
+  }
+  if (!missSoundBuffer.loadFromFile("assets/Audio/missSound.wav")) {
+    cerr << "Failed to load miss sound" << endl;
+  }
 
   // sound players
   Sound titleSong(titleSongBuffer);
   Sound titleTransSound(titleTransSoundBuffer);
+  Sound gameSong(gameSongBuffer);
+  Sound correctSound(correctSoundBuffer);
+  Sound missSound(missSoundBuffer);
 
   // initialize clocks
   Clock gameClock;
@@ -256,6 +271,7 @@ int main() {
 
   // start title song
   titleSong.setLooping(true);
+  titleSong.setVolume(50);
   titleSong.play();
   bool isLooping = titleSong.isLooping();
 
@@ -363,6 +379,11 @@ int main() {
     } // END delta time
   } // END main menu window loop
 
+  // start game song
+  gameSong.setLooping(true);
+  gameSong.setVolume(60);
+  gameSong.play();
+
   // start game window (KeyboardHero)loop //
   while (gameWindow.isOpen()) {
 
@@ -376,6 +397,7 @@ int main() {
       while (const auto event = gameWindow.pollEvent()) {
         if (event->is<Event::Closed>()) {
           gameWindow.close();
+          gameSong.stop();
         }
 
         // keyboard input - key pressed //
@@ -384,11 +406,17 @@ int main() {
           // Escape -> quit
           if (key->scancode == Keyboard::Scancode::Escape) {
             gameWindow.close();
+            gameSong.stop();
           }
 
           // Tab -> pause window
           if (key->scancode == Keyboard::Scancode::Tab) {
             isPaused = !isPaused;
+            if (gameSong.getStatus() == SoundSource::Status::Playing) {
+              gameSong.pause();
+            } else {
+              gameSong.play();
+            }
           }
 
           // left hand switch
@@ -429,6 +457,8 @@ int main() {
                 missLeftText.setCharacterSize(36);
               }
               leftMessageClock.restart();
+              // play miss sound
+              missSound.play();
             }
             if (inTargetL &&
                 getDescription(key->scancode) ==
@@ -449,6 +479,8 @@ int main() {
               showLCorrectMessage = true;
               randomLeftLetters.erase(randomLeftLetters.begin());
               leftMessageClock.restart();
+              // play correct sound
+              correctSound.play();
             }
             break;
           default:
@@ -491,6 +523,8 @@ int main() {
                 missRightText.setCharacterSize(36);
               }
               rightMessageClock.restart();
+              // play miss sound
+              missSound.play();
             }
             if (inTargetR &&
                 getDescription(key->scancode) ==
@@ -511,6 +545,8 @@ int main() {
                 correctRightText.setCharacterSize(36);
               }
               rightMessageClock.restart();
+              // play correct sound
+              correctSound.play();
             }
             break;
           default:
@@ -602,6 +638,8 @@ int main() {
           }
           leftMessageClock.restart();
           showLMissMessage = true;
+          // play miss sound
+          missSound.play();
         }
         // right
         if (randomRightLetters[0].randomRightLetterText.getPosition().y >=
@@ -622,6 +660,8 @@ int main() {
           }
           rightMessageClock.restart();
           showRMissMessage = true;
+          // play miss sound
+          missSound.play();
         }
 
         // left letter collisions with target box
