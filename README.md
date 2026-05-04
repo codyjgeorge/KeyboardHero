@@ -12,15 +12,15 @@ I will continue to update progress as development takes place.
 
 ### 📈 Progress Report
 
-- [x] Title Window
-- [x] Title Window music/sounds
-- [ ] Rules Window
-- [ ] Controls Window
-- [ ] Settings Window
-- [ ] Pause Window
-- [ ] Song 1
-- [ ] Song 2
-- [ ] Song 3
+- [x] Title window
+- [x] Title window music/sounds
+- [x] Game window
+- [x] Game window music/sounds
+- [x] Falling letters
+- [x] Hit box/Target box
+- [x] Comparing input to falling letters
+- [ ] Final touches & bug fixes
+- [ ] Finalization for Linux, MacOS and Windows
 
 ### 🎬 Preview
 
