@@ -8,3 +8,6 @@ dist/
 # clangd / editor caches
 .cache/
 compile_commands.json
+
+# OS zips
+OSzips/
