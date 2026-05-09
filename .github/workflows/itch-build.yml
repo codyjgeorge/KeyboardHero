@@ -41,6 +41,11 @@ jobs:
           choco install -y cmake ninja zip
         shell: powershell
 
+      # Ensure we build with MSVC on Windows (matches vcpkg's x64-windows triplet ABI)
+      - name: Set up MSVC
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
       # ----------------------
       # vcpkg (clone + bootstrap) + SFML
       # ----------------------
@@ -63,7 +68,7 @@ jobs:
         shell: bash
 
       # ----------------------
-      # Configure / Build / Install (split by OS so paths/shells work)
+      # Configure / Build / Install
       # ----------------------
       - name: Configure (Linux/macOS)
         if: runner.os != 'Windows'
@@ -83,22 +88,24 @@ jobs:
         run: cmake --install build --prefix dist
         shell: bash
 
+      # Windows uses a multi-config generator; build/install with --config Release.
       - name: Configure (Windows)
         if: runner.os == 'Windows'
         run: >
-          cmake -S . -B build -G Ninja
-          -DCMAKE_BUILD_TYPE=Release
+          cmake -S . -B build
+          -G "Visual Studio 17 2022"
+          -A x64
           -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}\vcpkg\scripts\buildsystems\vcpkg.cmake"
         shell: powershell
 
       - name: Build (Windows)
         if: runner.os == 'Windows'
-        run: cmake --build build
+        run: cmake --build build --config Release
         shell: powershell
 
       - name: Install to dist (Windows)
         if: runner.os == 'Windows'
-        run: cmake --install build --prefix dist
+        run: cmake --install build --config Release --prefix dist
         shell: powershell
 
       # ----------------------
