@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       # ----------------------
-      # OS tools + system deps needed to build SFML from source via vcpkg
+      # OS tools + system deps (needed for SFML build on Linux)
       # ----------------------
       - name: Install tools + deps (Linux)
         if: runner.os == 'Linux'
@@ -32,8 +32,8 @@ jobs:
         run: |
           brew update
           brew install cmake ninja zip
-          # X11 headers/libs often required when building SFML
-          brew install --cask xquartz
+          # Optional; only needed if you later hit X11-related SFML build issues on macOS
+          # brew install --cask xquartz
 
       - name: Install tools + deps (Windows)
         if: runner.os == 'Windows'
@@ -63,43 +63,42 @@ jobs:
         shell: bash
 
       # ----------------------
-      # Configure / Build / Install
+      # Configure / Build / Install (into dist/)
       # ----------------------
-      - name: Configure (macOS/Linux)
-        if: runner.os != 'Windows'
+      - name: Configure
         run: >
           cmake -S . -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
         shell: bash
 
-      - name: Build (macOS/Linux)
-        if: runner.os != 'Windows'
+      - name: Build
         run: cmake --build build
         shell: bash
 
-      - name: Install to dist (macOS/Linux)
-        if: runner.os != 'Windows'
+      - name: Install to dist
         run: cmake --install build --prefix dist
         shell: bash
 
-      - name: Configure (Windows)
+      # ----------------------
+      # Bundle runtime libs into dist/
+      # ----------------------
+      - name: Bundle runtime libs (Windows)
         if: runner.os == 'Windows'
-        run: >
-          cmake -S . -B build -G Ninja
-          -DCMAKE_BUILD_TYPE=Release
-          -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}\vcpkg\scripts\buildsystems\vcpkg.cmake"
+        run: |
+          # Copy SFML DLLs (and other runtime deps) next to the exe
+          Copy-Item -Force -ErrorAction SilentlyContinue "vcpkg\installed\x64-windows\bin\*.dll" "dist\"
+          Copy-Item -Force -ErrorAction SilentlyContinue "vcpkg\installed\x64-windows\debug\bin\*.dll" "dist\"
         shell: powershell
 
-      - name: Build (Windows)
-        if: runner.os == 'Windows'
-        run: cmake --build build
-        shell: powershell
-
-      - name: Install to dist (Windows)
-        if: runner.os == 'Windows'
-        run: cmake --install build --prefix dist
-        shell: powershell
+      - name: Bundle runtime libs (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: |
+          set -euxo pipefail
+          # Copy shared libs next to the executable (safe if none match)
+          cp -av vcpkg/installed/*/lib/*.so* dist/ 2>/dev/null || true
+          cp -av vcpkg/installed/*/lib/*.dylib dist/ 2>/dev/null || true
+        shell: bash
 
       # ----------------------
       # Zip + upload artifacts
