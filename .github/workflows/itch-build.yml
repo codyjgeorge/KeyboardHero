@@ -16,27 +16,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install tools (Linux)
+      # ----------------------
+      # OS tools + system deps needed to build SFML from source via vcpkg
+      # ----------------------
+      - name: Install tools + deps (Linux)
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake ninja-build g++ zip
+          sudo apt-get install -y \
+            cmake ninja-build g++ zip \
+            libx11-dev libxi-dev libxrandr-dev libxcursor-dev libudev-dev libgl1-mesa-dev
 
-      - name: Install tools (macOS)
+      - name: Install tools + deps (macOS)
         if: runner.os == 'macOS'
         run: |
           brew update
           brew install cmake ninja zip
+          # X11 headers/libs often required when building SFML
+          brew install --cask xquartz
 
-      - name: Install tools (Windows)
+      - name: Install tools + deps (Windows)
         if: runner.os == 'Windows'
         run: |
           choco install -y cmake ninja zip
         shell: powershell
 
-      - name: Clone + bootstrap vcpkg
-        run: |
-          git clone https://github.com/microsoft/vcpkg.git vcpkg
+      # ----------------------
+      # vcpkg (clone + bootstrap) + SFML
+      # ----------------------
+      - name: Clone vcpkg
+        run: git clone https://github.com/microsoft/vcpkg.git vcpkg
         shell: bash
 
       - name: Bootstrap vcpkg (Windows)
@@ -53,24 +62,55 @@ jobs:
         run: ./vcpkg/vcpkg install sfml
         shell: bash
 
-      - name: Configure
+      # ----------------------
+      # Configure / Build / Install
+      # ----------------------
+      - name: Configure (macOS/Linux)
+        if: runner.os != 'Windows'
         run: >
           cmake -S . -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
+        shell: bash
 
-      - name: Build
+      - name: Build (macOS/Linux)
+        if: runner.os != 'Windows'
         run: cmake --build build
+        shell: bash
 
-      - name: Install to dist
+      - name: Install to dist (macOS/Linux)
+        if: runner.os != 'Windows'
         run: cmake --install build --prefix dist
+        shell: bash
 
+      - name: Configure (Windows)
+        if: runner.os == 'Windows'
+        run: >
+          cmake -S . -B build -G Ninja
+          -DCMAKE_BUILD_TYPE=Release
+          -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}\vcpkg\scripts\buildsystems\vcpkg.cmake"
+        shell: powershell
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --build build
+        shell: powershell
+
+      - name: Install to dist (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --install build --prefix dist
+        shell: powershell
+
+      # ----------------------
+      # Zip + upload artifacts
+      # ----------------------
       - name: Zip (macOS/Linux)
         if: runner.os != 'Windows'
         run: |
           cd dist
           zip -r ../KeyboardHero-${{ runner.os }}.zip .
           cd ..
+        shell: bash
 
       - name: Zip (Windows)
         if: runner.os == 'Windows'
