@@ -153,4 +153,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: KeyboardHero-${{ runner.os }}
-          path: KeyboardHero-*.zip
+          path: KeyboardHero-${{ runner.os }}.zip
