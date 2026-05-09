@@ -16,39 +16,48 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install build tools (Linux)
+      - name: Install tools (Linux)
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y ninja-build zip
+          sudo apt-get install -y cmake ninja-build g++ zip
 
-      - name: Install build tools (macOS)
+      - name: Install tools (macOS)
         if: runner.os == 'macOS'
         run: |
           brew update
-          brew install ninja zip
+          brew install cmake ninja zip
 
-      - name: Install build tools (Windows)
+      - name: Install tools (Windows)
         if: runner.os == 'Windows'
         run: |
-          choco install -y ninja zip
+          choco install -y cmake ninja zip
         shell: powershell
 
-      # vcpkg manifest install (uses ./vcpkg.json)
-      - name: vcpkg install deps
-        uses: lukka/run-vcpkg@v11
-        with:
-          vcpkgJsonGlob: "vcpkg.json"
-          
+      - name: Clone + bootstrap vcpkg
+        run: |
+          git clone https://github.com/microsoft/vcpkg.git vcpkg
+        shell: bash
 
+      - name: Bootstrap vcpkg (Windows)
+        if: runner.os == 'Windows'
+        run: .\vcpkg\bootstrap-vcpkg.bat
+        shell: powershell
 
-      # Configure (use vcpkg toolchain)
+      - name: Bootstrap vcpkg (macOS/Linux)
+        if: runner.os != 'Windows'
+        run: ./vcpkg/bootstrap-vcpkg.sh
+        shell: bash
+
+      - name: Install SFML via vcpkg
+        run: ./vcpkg/vcpkg install sfml
+        shell: bash
+
       - name: Configure
         run: >
-          cmake -S . -B build
+          cmake -S . -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Release
-          -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_ROOT }}/scripts/buildsystems/vcpkg.cmake
-          -G Ninja
+          -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
 
       - name: Build
         run: cmake --build build
