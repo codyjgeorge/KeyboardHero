@@ -40,13 +40,13 @@ jobs:
       # ----------------------
       # vcpkg (Windows) + SFML
       # ----------------------
-      - name: Setup vcpkg (Windows)
+      - name: Install vcpkg + SFML (Windows)
         if: runner.os == 'Windows'
-        uses: microsoft/setup-vcpkg@v1
-
-      - name: Install SFML via vcpkg (Windows)
-        if: runner.os == 'Windows'
-        run: vcpkg install sfml
+        run: |
+          git clone https://github.com/microsoft/vcpkg.git $env:GITHUB_WORKSPACE\vcpkg
+          cd $env:GITHUB_WORKSPACE\vcpkg
+          .\bootstrap-vcpkg.bat
+          .\vcpkg.exe install sfml
         shell: powershell
 
       # ----------------------
@@ -68,7 +68,7 @@ jobs:
         if: runner.os == 'Windows'
         run: >
           cmake -S . -B build
-          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake"
+          -DCMAKE_TOOLCHAIN_FILE="$env:GITHUB_WORKSPACE\scripts\buildsystems\vcpkg.cmake"
         shell: powershell
 
       - name: Build (Windows Release)
