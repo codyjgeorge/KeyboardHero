@@ -483,7 +483,7 @@ int main() {
           }
 
           // CTRL -> mute game song
-          if (key->scancode == Keyboard::Scancode::LControl or
+          if (key->scancode == Keyboard::Scancode::LControl ||
               key->scancode == Keyboard::Scancode::RControl) {
             isMuted = !isMuted;
             if (isMuted) {
@@ -746,7 +746,7 @@ int main() {
           inTargetL = true;
         }
         if (randomLeftLetters[0].randomLeftLetterText.getPosition().y <
-                (targetBox.getPosition().y - 54) or
+                (targetBox.getPosition().y - 54) ||
             randomLeftLetters[0].randomLeftLetterText.getPosition().y >
                 (targetBox.getPosition().y + 36)) {
           inTargetL = false;
@@ -760,7 +760,7 @@ int main() {
           inTargetR = true;
         }
         if (randomRightLetters[0].randomRightLetterText.getPosition().y <
-                (targetBox.getPosition().y - 54) or
+                (targetBox.getPosition().y - 54) ||
             randomRightLetters[0].randomRightLetterText.getPosition().y >
                 (targetBox.getPosition().y + 36)) {
           inTargetR = false;
