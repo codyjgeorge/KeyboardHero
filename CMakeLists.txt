@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.21)
 project(KeyboardHero)
 
 # set C++ standard
@@ -42,6 +42,9 @@ add_custom_command(
 install(TARGETS KeyboardHero
   RUNTIME DESTINATION .
   BUNDLE DESTINATION .
+  RUNTIME_DEPENDENCIES
+    PRE_EXCLUDE_REGEXES "api-ms-" "ext-ms-"
+    POST_EXCLUDE_REGEXES ".*system32/.*"
 )
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/assets
