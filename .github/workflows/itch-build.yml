@@ -32,7 +32,7 @@ jobs:
         run: |
           brew update
           brew install cmake ninja zip
-          # Only needed if SFML build complains about missing X11 on macOS:
+          # Uncomment only if SFML build complains about missing X11 on macOS:
           # brew install --cask xquartz
 
       - name: Install tools + deps (Windows)
@@ -63,22 +63,43 @@ jobs:
         shell: bash
 
       # ----------------------
-      # Configure / Build / Install (into dist/)
+      # Configure / Build / Install (split by OS so paths/shells work)
       # ----------------------
-      - name: Configure
+      - name: Configure (Linux/macOS)
+        if: runner.os != 'Windows'
         run: >
           cmake -S . -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake
         shell: bash
 
-      - name: Build
+      - name: Build (Linux/macOS)
+        if: runner.os != 'Windows'
         run: cmake --build build
         shell: bash
 
-      - name: Install to dist
+      - name: Install to dist (Linux/macOS)
+        if: runner.os != 'Windows'
         run: cmake --install build --prefix dist
         shell: bash
+
+      - name: Configure (Windows)
+        if: runner.os == 'Windows'
+        run: >
+          cmake -S . -B build -G Ninja
+          -DCMAKE_BUILD_TYPE=Release
+          -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}\vcpkg\scripts\buildsystems\vcpkg.cmake"
+        shell: powershell
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --build build
+        shell: powershell
+
+      - name: Install to dist (Windows)
+        if: runner.os == 'Windows'
+        run: cmake --install build --prefix dist
+        shell: powershell
 
       # ----------------------
       # Bundle runtime libs into dist/ (triplet-agnostic)
@@ -99,7 +120,6 @@ jobs:
         run: |
           set -euxo pipefail
           mkdir -p dist
-          # Copy shared libs next to the executable/app (safe if none match)
           find vcpkg/installed -type f \( -name "*.so*" -o -name "*.dylib" \) -exec cp -av {} dist/ \; || true
         shell: bash
 
