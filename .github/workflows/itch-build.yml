@@ -1,0 +1,106 @@
+name: Build zips for itch.io
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ----------------------
+      # macOS + Linux deps
+      # ----------------------
+      - name: Install deps (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ libsfml-dev zip
+
+      - name: Install deps (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew update
+          brew install cmake sfml
+
+      # ----------------------
+      # Windows deps via vcpkg
+      # ----------------------
+      - name: Install deps (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          choco install -y cmake
+        shell: powershell
+
+      - name: vcpkg install SFML (Windows)
+        if: runner.os == 'Windows'
+        uses: lukka/run-vcpkg@v11
+        with:
+          vcpkgGitCommitId: "3b1db6b387c8d6a1d7c3e2ef39fdbd3d0b45f8c4"
+          vcpkgJsonGlob: ""   # not using manifest mode
+          runVcpkgInstall: true
+          vcpkgInstall: "sfml"
+
+      # ----------------------
+      # Configure / Build / Install
+      # ----------------------
+      - name: Configure (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: cmake --build build -j
+
+      - name: Install to dist (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: cmake --install build --prefix dist
+
+      - name: Configure (Windows)
+        if: runner.os == 'Windows'
+        run: >
+          cmake -S . -B build
+          -DCMAKE_TOOLCHAIN_FILE="${{ env.VCPKG_ROOT }}\scripts\buildsystems\vcpkg.cmake"
+        shell: powershell
+
+      - name: Build (Windows Release)
+        if: runner.os == 'Windows'
+        run: cmake --build build --config Release
+        shell: powershell
+
+      - name: Install to dist (Windows Release)
+        if: runner.os == 'Windows'
+        run: cmake --install build --config Release --prefix dist
+        shell: powershell
+
+      # ----------------------
+      # Zip dist
+      # ----------------------
+      - name: Zip (macOS/Linux)
+        if: runner.os != 'Windows'
+        run: |
+          cd dist
+          zip -r ../KeyboardHero-${{ runner.os }}.zip .
+          cd ..
+
+      - name: Zip (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          cd dist
+          powershell -Command "Compress-Archive -Path * -DestinationPath ..\KeyboardHero-Windows.zip"
+          cd ..
+        shell: powershell
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: KeyboardHero-${{ runner.os }}
+          path: KeyboardHero-*.zip
