@@ -1,5 +1,6 @@
 {
   "name": "keyboardhero",
   "version-string": "0.1.0",
+  "builtin-baseline": "3b1db6b387c8d6a1d7c3e2ef39fdbd3d0b45f8c4",
   "dependencies": ["sfml"]
 }
