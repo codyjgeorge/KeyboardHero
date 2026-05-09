@@ -39,6 +39,8 @@ jobs:
         uses: lukka/run-vcpkg@v11
         with:
           vcpkgJsonGlob: "vcpkg.json"
+          vcpkgGitCommitId: "3b1db6b387c8d6a1d7c3e2ef39fdbd3d0b45f8c4"
+
 
       # Configure (use vcpkg toolchain)
       - name: Configure
