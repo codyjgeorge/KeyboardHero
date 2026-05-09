@@ -118,9 +118,22 @@ int main() {
   menuText.setOrigin({menuTextSize.size.x / 2.f, menuTextSize.size.y / 2.f});
   menuText.setPosition({window.getSize().x / 2.f, window.getSize().y / 1.5f});
 
+  // loading error text
+  Text loadingText(firacode);
+  loadingText.setString("Loading...please do not press any keys\nKeyboardHero "
+                        "may result in KeyboardFailure");
+  loadingText.setCharacterSize(36);
+  loadingText.setFillColor(Color::Yellow);
+  FloatRect loadingTextSize = loadingText.getLocalBounds();
+  loadingText.setOrigin(
+      {loadingTextSize.size.x / 2.f, loadingTextSize.size.y / 2.f});
+  loadingText.setPosition(
+      {window.getSize().x / 2.f, window.getSize().y - 76.f});
+  bool showLoadingMessage = true;
+
   // create game menu text
   Text gamemenuText(firacode);
-  gamemenuText.setString("TAB -> Pause\n\nESC -> Quit");
+  gamemenuText.setString("TAB -> Pause\n\nESC -> Quit\n\nCTL -> Mute Song");
   gamemenuText.setCharacterSize(36);
   gamemenuText.setFillColor(Color::White);
   FloatRect gamemenuTextSize = gamemenuText.getLocalBounds();
@@ -261,6 +274,7 @@ int main() {
   Clock rightSpawnClock;
   Clock leftMessageClock;
   Clock rightMessageClock;
+  Clock loadingClock;
   float bgSpawnInterval = 0.2f;
 
   // left and right letter attribute declarations
@@ -336,7 +350,7 @@ int main() {
             rightLetterSpeed = 400.f;
           }
         } // END key pressed handling
-      } // END game loop event handling
+      } // END menu loop event handling
 
       // start drawing - menu window
       window.clear();
@@ -375,6 +389,16 @@ int main() {
         window.draw(letter.randomLetterText);
       }
 
+      // show loading message
+      if (showLoadingMessage) {
+        window.draw(loadingText);
+        cout << loadingClock.getElapsedTime().asSeconds() << endl;
+        if (loadingClock.getElapsedTime().asSeconds() > 3.f) {
+          showLoadingMessage = false;
+          loadingClock.stop();
+        }
+      }
+
       window.display();
     } // END delta time
   } // END main menu window loop
@@ -383,6 +407,7 @@ int main() {
   gameSong.setLooping(true);
   gameSong.setVolume(60);
   gameSong.play();
+  bool isMuted = false;
 
   // start game window (KeyboardHero)loop //
   while (gameWindow.isOpen()) {
@@ -416,6 +441,17 @@ int main() {
               gameSong.pause();
             } else {
               gameSong.play();
+            }
+          }
+
+          // CTRL -> mute game song
+          if (key->scancode == Keyboard::Scancode::LControl or
+              key->scancode == Keyboard::Scancode::RControl) {
+            isMuted = !isMuted;
+            if (isMuted) {
+              gameSong.setVolume(0);
+            } else {
+              gameSong.setVolume(60);
             }
           }
 
