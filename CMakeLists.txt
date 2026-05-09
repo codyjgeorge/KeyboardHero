@@ -34,3 +34,13 @@ add_custom_command(
           ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:KeyboardHero>/assets
 )
 
+# Install in dist folder
+install(TARGETS KeyboardHero
+  RUNTIME DESTINATION .
+  RUNTIME DESTINATION .
+)
+
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/assets
+  DESTINATION .
+)
+

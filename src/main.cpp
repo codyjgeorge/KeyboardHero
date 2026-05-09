@@ -2,11 +2,47 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include <ctime>
-#include <ios>
+#include <filesystem>
 #include <iostream>
+#include <string>
 
 using namespace sf;
 using namespace std;
+
+#if defined(__APPLE__)
+#include <mach-o/dyld.h>
+#endif
+
+// path functions
+static std::filesystem::path getExecutableDir() {
+#if defined(__APPLE__)
+  uint32_t size = 0;
+  _NSGetExecutablePath(nullptr, &size);
+  std::string buf(size, '\0');
+  if (_NSGetExecutablePath(buf.data(), &size) != 0) {
+    return std::filesystem::current_path(); // fallback
+  }
+  return std::filesystem::weakly_canonical(buf).parent_path();
+#else
+  return std::filesystem::current_path();
+#endif
+}
+
+static std::filesystem::path assetPath(const std::string &insideAssets) {
+  // Common case: assets folder sits next to the executable
+  auto p = getExecutableDir() / "assets" / insideAssets;
+  if (std::filesystem::exists(p))
+    return p;
+
+  // macOS .app bundle case: .../MyGame.app/Contents/Resources/assets/...
+  auto p2 = std::filesystem::weakly_canonical(
+      getExecutableDir() / ".." / "Resources" / "assets" / insideAssets);
+  if (std::filesystem::exists(p2))
+    return p2;
+
+  // last resort: working directory
+  return std::filesystem::current_path() / "assets" / insideAssets;
+}
 
 // random letter functions
 char random_letter_generator() { return 'A' + rand() % 26; }
@@ -83,7 +119,7 @@ int main() {
   settings.antiAliasingLevel = 4;
 
   // load font - FiraCodeNerdFontMono-Light
-  const string Fira_Path = "assets/Fonts/FiraCodeNerdFontMono-Light.ttf";
+  auto Fira_Path = assetPath("Fonts/FiraCodeNerdFontMono-Light.ttf");
   Font firacode;
   if (!firacode.openFromFile(Fira_Path)) {
     cerr << "Error loading firacode" << endl;
@@ -243,20 +279,23 @@ int main() {
   SoundBuffer missSoundBuffer;
 
   // load to buffers
-  if (!titleSongBuffer.loadFromFile("assets/Audio/StartMenu-Song.wav")) {
+  if (!titleSongBuffer.loadFromFile(
+          assetPath("Audio/StartMenu-Song.wav").string())) {
     cerr << "Failed to load title song" << endl;
   }
   if (!titleTransSoundBuffer.loadFromFile(
-          "assets/Audio/StartMenuTransition-Sound.wav")) {
+          assetPath("Audio/StartMenuTransition-Sound.wav").string())) {
     cerr << "Failed to load title transition sound" << endl;
   }
-  if (!gameSongBuffer.loadFromFile("assets/Audio/gameSong1.wav")) {
+  if (!gameSongBuffer.loadFromFile(assetPath("Audio/gameSong1.wav").string())) {
     cerr << "Failed to load game song" << endl;
   }
-  if (!correctSoundBuffer.loadFromFile("assets/Audio/correctHit.wav")) {
+  if (!correctSoundBuffer.loadFromFile(
+          assetPath("Audio/correctHit.wav").string())) {
     cerr << "Failed to load correct hit sound" << endl;
   }
-  if (!missSoundBuffer.loadFromFile("assets/Audio/missSound.wav")) {
+  if (!missSoundBuffer.loadFromFile(
+          assetPath("Audio/missSound.wav").string())) {
     cerr << "Failed to load miss sound" << endl;
   }
 
@@ -392,7 +431,6 @@ int main() {
       // show loading message
       if (showLoadingMessage) {
         window.draw(loadingText);
-        cout << loadingClock.getElapsedTime().asSeconds() << endl;
         if (loadingClock.getElapsedTime().asSeconds() > 3.f) {
           showLoadingMessage = false;
           loadingClock.stop();
