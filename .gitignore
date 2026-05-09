@@ -1,0 +1,10 @@
+# build outputs
+build/
+dist/
+
+# macOS junk
+.DS_Store
+
+# clangd / editor caches
+.cache/
+compile_commands.json
