@@ -2,25 +2,11 @@
 
 ---
 
-## 🚧 Under Construction
+## 🎮 Download it from Itch.io
 
-This game is currently in the development process. In the meantime, feel free to check out my Itch.io account until this game becomes available.
+You can find KeyboardHero downloads for Mac, Windows, and Linux on my itch profile!
 
 [Cody's Itch.io](https://cod3z.itch.io/)
-
-I will continue to update progress as development takes place.
-
-### 📈 Progress Report
-
-- [x] Title window
-- [x] Title window music/sounds
-- [x] Game window
-- [x] Game window music/sounds
-- [x] Falling letters
-- [x] Hit box/Target box
-- [x] Comparing input to falling letters
-- [ ] Final touches & bug fixes
-- [ ] Finalization for Linux, MacOS and Windows
 
 ### 🎬 Preview
 
