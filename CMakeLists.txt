@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # find SFML (make sure it's installed on your system)
-find_package(SFML 3.0 COMPONENTS System Window Graphics Audio REQUIRED)
+find_package(SFML REQUIRED COMPONENTS System Window Graphics Audio REQUIRED)
 
 # create executable
 if(APPLE)
