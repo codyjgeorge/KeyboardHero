@@ -133,11 +133,20 @@ jobs:
       # ----------------------
       # Zip + upload artifacts
       # ----------------------
-      - name: Zip (macOS/Linux)
-        if: runner.os != 'Windows'
+      - name: Zip (macOS)
+        if: runner.os == 'macOS'
         run: |
+          # create a zip whose root is the contents of dist (KeyboardHero.app at top level)
+          ditto -c -k --sequesterRsrc dist KeyboardHero-macOS.zip
+        shell: bash
+
+      - name: Zip (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          # ensure the executable bit is set, then zip the contents of dist
+          chmod +x dist/KeyboardHero || true
           cd dist
-          zip -r ../KeyboardHero-${{ runner.os }}.zip .
+          zip -r ../KeyboardHero-Linux.zip .
           cd ..
         shell: bash
 
@@ -148,9 +157,9 @@ jobs:
           powershell -Command "Compress-Archive -Path * -DestinationPath ..\KeyboardHero-Windows.zip"
           cd ..
         shell: powershell
-
+       
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: KeyboardHero-${{ runner.os }}
-          path: KeyboardHero-*.zip
+          path: KeyboardHero-${{ runner.os }}.zip
