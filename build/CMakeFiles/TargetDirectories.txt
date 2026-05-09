@@ -1,3 +1,7 @@
 /Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/KeyboardHero.dir
 /Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/edit_cache.dir
 /Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/rebuild_cache.dir
+/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/list_install_components.dir
+/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/install.dir
+/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/install/local.dir
+/Users/codygeorge/dev/C++games/KeyboardHero/build/CMakeFiles/install/strip.dir

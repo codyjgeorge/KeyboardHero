@@ -120,6 +120,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake"
+  "/opt/homebrew/share/cmake/Modules/MacOSXBundleInfo.plist.in"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-C.cmake"
@@ -149,6 +150,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeCXXCompiler.cmake"
+  "KeyboardHero.app/Contents/MacOS"
+  "KeyboardHero.app/Contents/Info.plist"
+  "KeyboardHero.app/Contents/Info.plist"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

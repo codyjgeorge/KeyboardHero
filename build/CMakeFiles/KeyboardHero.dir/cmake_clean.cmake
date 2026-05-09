@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/KeyboardHero.dir/src/main.cpp.o"
   "CMakeFiles/KeyboardHero.dir/src/main.cpp.o.d"
-  "KeyboardHero"
+  "KeyboardHero.app/Contents/MacOS/KeyboardHero"
   "KeyboardHero.pdb"
 )
 

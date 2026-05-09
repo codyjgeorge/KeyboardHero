@@ -13,7 +13,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(SFML 3.0 COMPONENTS System Window Graphics Audio REQUIRED)
 
 # create executable
-add_executable(KeyboardHero src/main.cpp)
+if(APPLE)
+  add_executable(KeyboardHero MACOSX_BUNDLE src/main.cpp)
+else()
+  add_executable(KeyboardHero src/main.cpp)
+endif()
 
 # link header files
 # target_include_directories(KeyboardHero PRIVATE include)
@@ -37,7 +41,7 @@ add_custom_command(
 # Install in dist folder
 install(TARGETS KeyboardHero
   RUNTIME DESTINATION .
-  RUNTIME DESTINATION .
+  BUNDLE DESTINATION .
 )
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/assets
