@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       # ----------------------
-      # Dependencies
+      # macOS + Linux deps
       # ----------------------
       - name: Install deps (Linux)
         if: runner.os == 'Linux'
@@ -31,23 +31,23 @@ jobs:
           brew update
           brew install cmake sfml
 
+      # ----------------------
+      # Windows deps via vcpkg
+      # ----------------------
       - name: Install deps (Windows)
         if: runner.os == 'Windows'
         run: |
           choco install -y cmake
         shell: powershell
 
-      # ----------------------
-      # vcpkg (Windows) + SFML
-      # ----------------------
-      - name: Install vcpkg + SFML (Windows)
+      - name: vcpkg install SFML (Windows)
         if: runner.os == 'Windows'
-        run: |
-          git clone https://github.com/microsoft/vcpkg.git $env:GITHUB_WORKSPACE\vcpkg
-          cd $env:GITHUB_WORKSPACE\vcpkg
-          .\bootstrap-vcpkg.bat
-          .\vcpkg.exe install sfml
-        shell: powershell
+        uses: lukka/run-vcpkg@v11
+        with:
+          vcpkgGitCommitId: "3b1db6b387c8d6a1d7c3e2ef39fdbd3d0b45f8c4"
+          vcpkgJsonGlob: ""   # not using manifest mode
+          runVcpkgInstall: true
+          vcpkgInstall: "sfml"
 
       # ----------------------
       # Configure / Build / Install
@@ -68,7 +68,7 @@ jobs:
         if: runner.os == 'Windows'
         run: >
           cmake -S . -B build
-          -DCMAKE_TOOLCHAIN_FILE="$env:GITHUB_WORKSPACE\scripts\buildsystems\vcpkg.cmake"
+          -DCMAKE_TOOLCHAIN_FILE="${{ env.VCPKG_ROOT }}\scripts\buildsystems\vcpkg.cmake"
         shell: powershell
 
       - name: Build (Windows Release)
